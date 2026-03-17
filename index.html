@@ -431,7 +431,20 @@ body[data-mobile-nav-style=modern] .simple-navigation-menu.animation-arrow-show 
 								}
 							});
 						}
-					});</script> <style>.theme-demos,.theme-demos *{display:none !important;visibility:hidden !important;width:0 !important;height:0 !important;overflow:hidden !important;}</style></head><body
+					});</script> <style>.theme-demos,.theme-demos *,.theme-demos-main,.theme-demos-main *,.close-popup{display:none !important;visibility:hidden !important;width:0 !important;height:0 !important;overflow:hidden !important;}</style>
+<!-- Purple Hat: Font + Logo + Consistency Fix -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Override body font to Inter for consistency */
+body,p,span,div,li,td{font-family:'Inter',sans-serif !important;}
+h1,h2,h3,h4,h5,h6,.alt-font,.crafto-heading,.crafto-primary-title,.navbar-brand{font-family:'Space Grotesk',sans-serif !important;}
+/* Hide broken logo images — JS replaces with text logo */
+.navbar-brand img.default-logo,.navbar-brand img.alt-logo,.navbar-brand img.mobile-logo{display:none !important;}
+/* Page-transition overlay */
+[data-id="76f68aa"]{display:none !important;} [data-id="604ed2b"]{display:none !important;}
+#ph-overlay{position:fixed;inset:0;background:#313E3B;z-index:999999;pointer-events:none;opacity:1;transition:opacity .4s ease;}
+</style>
+</head><body
 class="home wp-singular page-template-default page page-id-5 wp-embed-responsive wp-theme-crafto wp-child-theme-crafto-child crafto-addons-active elementor-default elementor-kit-3 elementor-page elementor-page-5" data-mobile-nav-style=modern data-mobile-nav-trigger-alignment=right data-mobile-nav-bg-color=#313e3b> <script data-cfasync=false data-no-defer=1 data-no-minify=1 data-no-optimize=1>if(typeof ewww_webp_supported==="undefined"){var ewww_webp_supported=!1}if(ewww_webp_supported){document.body.classList.add("webp-support")}</script> <header
 id=masthead class="site-header header-reverse-wrapper" itemscope=itemscope itemtype=http://schema.org/WPHeader><nav
 class=" header-common-wrapper header-img standard navbar navbar-expand-lg header-reverse"><div
@@ -469,62 +482,10 @@ id=menu-item-1600 class="menu-item menu-item-type-post_type menu-item-object-pag
 href=index.html itemprop=url  class="nav-link before">Home</a></li>
 <li
 id=menu-item-1601 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601 item-depth-0 nav-item simple-dropdown"><a
-href=about.html itemprop=url  class="nav-link before">About</a></li>
-<li
-id=menu-item-3060 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3060 item-depth-0 nav-item dropdown megamenu default-megamenu"><a
-href=index.html# itemprop=url  class="nav-link before">Courses</a><i
-class="fa-solid fa-angle-down dropdown-toggle" data-bs-toggle=dropdown aria-hidden=true></i><div
-class="menu-back-div dropdown-menu megamenu-content" role=menu ><div
-data-elementor-type=wp-post data-elementor-id=3077 class="elementor elementor-3077"><div
-class=" elementor-element elementor-element-26b371bb e-con-full e-flex section-light e-con e-parent" data-id=26b371bb data-element_type=container><div
-class="elementor-element elementor-element-5f96afd7 elementor-widget__width-inherit elementor-vertical-align-middle elementor-widget elementor-widget-crafto-simple-navigation" data-id=5f96afd7 data-element_type=widget data-widget_type=crafto-simple-navigation.default><div
-class=elementor-widget-container><ul
-id=menu-simple-navigation class="menu crafto-navigation-menu simple-navigation-menu animation-arrow-show" role=menu><li
-class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2978 item-depth-0"><a
-href=https://crafto.themezaa.com/elearning/courses/  aria-label= "Development" itemprop=url  class=before><svg
-xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=currentColor class="bi bi-laptop" viewBox="0 0 16 16">
-<path
-d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
-</svg><div
-class=submenu-icon-content><span>Development</span><p>Develop professional skills</p></div></a></li>
-<li
-class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2979 item-depth-0"><a
-href=https://crafto.themezaa.com/elearning/courses/  aria-label= "Business" itemprop=url  class=before><svg
-xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=currentColor class="bi bi-briefcase" viewBox="0 0 16 16">
-<path
-d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
-</svg><div
-class=submenu-icon-content><span>Business</span><p>Advance your business</p></div></a></li>
-<li
-class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2980 item-depth-0"><a
-href=https://crafto.themezaa.com/elearning/courses/  aria-label= "Design" itemprop=url  class=before><svg
-xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=currentColor class="bi bi-vector-pen" viewBox="0 0 16 16">
-<path
-fill-rule=evenodd d="M10.646.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-1.902 1.902-.829 3.313a1.5 1.5 0 0 1-1.024 1.073L1.254 14.746 4.358 4.4A1.5 1.5 0 0 1 5.43 3.377l3.313-.828zm-1.8 2.908-3.173.793a.5.5 0 0 0-.358.342l-2.57 8.565 8.567-2.57a.5.5 0 0 0 .34-.357l.794-3.174-3.6-3.6z"/>
-<path
-fill-rule=evenodd d="M2.832 13.228 8 9a1 1 0 1 0-1-1l-4.228 5.168-.026.086z"/>
-</svg><div
-class=submenu-icon-content><span>Design</span><p>Design skills &#038; concepts</p></div></a></li>
-<li
-class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2981 item-depth-0"><a
-href=https://crafto.themezaa.com/elearning/courses/  aria-label= "Marketing" itemprop=url  class=before><svg
-xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=currentColor class="bi bi-megaphone" viewBox="0 0 16 16">
-<path
-d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 75 75 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0m-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233q.27.015.537.036c2.568.189 5.093.744 7.463 1.993zm-9 6.215v-4.13a95 95 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A61 61 0 0 1 4 10.065m-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68 68 0 0 0-1.722-.082z"/>
-</svg><div
-class=submenu-icon-content><span>Marketing</span><p>New age marketing skills</p></div></a></li></ul></div></div></div></div></div></li>
-<li
-id=menu-item-3233 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3233 item-depth-0 nav-item simple-dropdown"><a
-href=index.html# itemprop=url  class="nav-link before">Instructors</a></li>
-<li
-id=menu-item-1617 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617 item-depth-0 nav-item simple-dropdown"><a
-href=index.html# itemprop=url  class="nav-link before">Testimonial</a></li>
-<li
-id=menu-item-1610 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1610 item-depth-0 nav-item simple-dropdown"><a
-href=index.html# itemprop=url  class="nav-link before">Blog</a></li>
+href=about.html itemprop=url  class="nav-link before">About Us</a></li>
 <li
 id=menu-item-1606 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1606 item-depth-0 nav-item simple-dropdown"><a
-href=contact.html itemprop=url  class="nav-link before">Contact</a></li></ul></div></div></div></div><div
+href=contact.html itemprop=url  class="nav-link before">Contact Us</a></li></ul></div></div></div></div><div
 class=" elementor-element elementor-element-48bae986 e-con-full e-flex section-light e-con e-child" data-id=48bae986 data-element_type=container><div
 class="elementor-element elementor-element-6c13c1f elementor-hidden-mobile elementor-hidden-mobile_extra elementor-widget elementor-widget-crafto-button" data-id=6c13c1f data-element_type=widget data-widget_type=crafto-button.default><div
 class=elementor-widget-container><div
@@ -561,7 +522,7 @@ decoding=async width=336 height=285 src=https://crafto.themezaa.com/elearning/wp
 class=" elementor-element elementor-element-7f4e558 e-con-full e-flex section-light e-con e-child" data-id=7f4e558 data-element_type=container><div
 class="entrance-animation  elementor-element elementor-element-d51f3b4 e-con-full e-flex section-light e-con e-child" data-anime="{&quot;duration&quot;:600,&quot;delay&quot;:100,&quot;staggervalue&quot;:200,&quot;easing&quot;:&quot;easeOutCirc&quot;,&quot;targets&quot;:&quot;.elementor-element-d51f3b4.entrance-animation&gt; .e-child,.elementor-element-d51f3b4.entrance-animation&gt; .e-con-inner &gt; .e-con-full.e-child,.elementor-element-d51f3b4.entrance-animation&gt; .elementor-widget,.elementor-element-d51f3b4.entrance-animation&gt; .e-con-inner &gt; .elementor-widget&quot;,&quot;opacity&quot;:[0,1],&quot;rotateY&quot;:[90,0],&quot;rotateZ&quot;:[-10,0],&quot;translateY&quot;:[80,0],&quot;translateZ&quot;:[50,0]}" data-id=d51f3b4 data-element_type=container><div
 class="elementor-element elementor-element-8a989ad elementor-widget elementor-widget-crafto-heading" data-id=8a989ad data-element_type=widget data-widget_type=crafto-heading.default><div
-class=elementor-widget-container><h1 class="crafto-heading"><span
+class=elementor-widget-container><h1 class="crafto-heading" style="line-height:1.2;word-break:break-word;white-space:normal;"><span
 class=crafto-primary-title>Engineering झाली सोपी</span></h1></div></div><div
 class="elementor-element elementor-element-8196fee elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-id=8196fee data-element_type=widget data-widget_type=text-editor.default><div
 class=elementor-widget-container>
@@ -585,7 +546,7 @@ class="elementor-element elementor-element-c906cd2 elementor-widget elementor-wi
 class=elementor-widget-container><div
 class="video-button-wrap video-button-style-4">
 <a
-class="video-icon-box popup-youtube" title="Video Play" href="https://www.youtube.com/watch?v=D5Ze-lXAJCc">
+class="video-icon-box popup-youtube" title="Video Play" href="https://www.youtube.com/watch?v=tvuYsX0RQk8">
 <span
 class=video-icon>
 <span
@@ -659,7 +620,7 @@ class=atropos-inner><div
 data-atropos-offset=-1><div
 class=three-d-parallax-hover>
 <img
-decoding=async width=975 height=990 src=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2025/02/demo-elearning-hero-banner-01.webp class=swiper-slide-image alt=demo-elearning-hero-banner-01 title srcset="https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2025/02/demo-elearning-hero-banner-01.webp 975w, https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2025/02/demo-elearning-hero-banner-01-295x300.webp 295w, https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2025/02/demo-elearning-hero-banner-01-768x780.webp 768w" sizes="(max-width: 975px) 100vw, 975px"></div></div>
+decoding=async width=975 height=990 src=hero-banner.png class=swiper-slide-image alt=hero-banner style="object-fit:cover;border-radius:50%" title srcset="" sizes="(max-width: 975px) 100vw, 975px"></div></div>
 <img
 decoding=async width=975 height=990 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="image-layer-1 ewww_webp" alt=demo-elearning-hero-banner-02 data-atropos-offset=1 srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== 1w" sizes="(max-width: 975px) 100vw, 975px" data-src-img=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02.png data-src-webp=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02.png.webp data-srcset-webp="https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02.png.webp 975w, https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02-295x300.png.webp 295w, https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02-768x780.png.webp 768w" data-srcset-img="https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02.png 975w, https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02-295x300.png 295w, https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02-768x780.png 768w" data-eio=j><noscript><img
 decoding=async width=975 height=990 src=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02.png class=image-layer-1 alt=demo-elearning-hero-banner-02 data-atropos-offset=1 srcset="https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02.png 975w, https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02-295x300.png 295w, https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-hero-banner-02-768x780.png 768w" sizes="(max-width: 975px) 100vw, 975px"></noscript></div></div></div></div></div></div></div></div></div></div></div><div
@@ -695,7 +656,7 @@ class="elementor-element elementor-element-f748e1f e-transform elementor-widget 
 class=elementor-widget-container><div
 class="elementor-button-wrapper crafto-button-wrapper">
 <a
-class="elementor-button btn-icon-right elementor-button-link default elementor-size-md elementor-animation-btn-switch-text btn-custom-effect" role=button href=https://crafto.themezaa.com/elearning/about/ ><div
+class="elementor-button btn-icon-right elementor-button-link default elementor-size-md elementor-animation-btn-switch-text btn-custom-effect" role=button href=https://play.google.com/store/apps/details?id=co.white.iebqk ><div
 class=elementor-button-content-wrapper>
 <span
 class=elementor-button-text data-btn-text="Learn more">Learn more</span>
@@ -718,7 +679,7 @@ class="elementor-element elementor-element-a70a217 elementor-widget elementor-wi
 class=elementor-widget-container><div
 class="crafto-heading no-shadow-animation"><span
 class=crafto-primary-title>Online courses from <a
-href=https://crafto.themezaa.com/elearning/our-instructors><span
+href=https://play.google.com/store/apps/details?id=co.white.iebqk><span
 class=separator> experts. </span></a></span></div></div></div></div></div><div
 class="entrance-animation  elementor-element elementor-element-764a8e2 e-con-full e-flex section-light e-con e-child" data-anime="{&quot;duration&quot;:600,&quot;delay&quot;:100,&quot;staggervalue&quot;:300,&quot;easing&quot;:&quot;easeOutQuad&quot;,&quot;targets&quot;:&quot;.elementor-element-764a8e2.entrance-animation&gt; .e-child,.elementor-element-764a8e2.entrance-animation&gt; .e-con-inner &gt; .e-con-full.e-child,.elementor-element-764a8e2.entrance-animation&gt; .elementor-widget,.elementor-element-764a8e2.entrance-animation&gt; .e-con-inner &gt; .elementor-widget&quot;,&quot;opacity&quot;:[0,1],&quot;translateX&quot;:[30,0],&quot;translateY&quot;:[30,0]}" data-id=764a8e2 data-element_type=container><div
 class=" elementor-element elementor-element-a0abb97 e-con-full e-flex section-light e-con e-child" data-id=a0abb97 data-element_type=container><div
@@ -792,7 +753,7 @@ class="elementor-element elementor-element-f76bc54 elementor-widget elementor-wi
 class=elementor-widget-container><div
 class="elementor-button-wrapper crafto-button-wrapper">
 <a
-class="elementor-button btn-icon-right elementor-button-link default elementor-size-md elementor-animation-btn-switch-icon btn-custom-effect" role=button href=https://crafto.themezaa.com/elearning/courses/ ><div
+class="elementor-button btn-icon-right elementor-button-link default elementor-size-md elementor-animation-btn-switch-icon btn-custom-effect" role=button href=https://play.google.com/store/apps/details?id=co.white.iebqk ><div
 class=elementor-button-content-wrapper>
 <span
 class=elementor-button-text>Explore all courses</span>
@@ -810,214 +771,7 @@ d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s
 class=" elementor-element elementor-element-1d281e4 e-con-full e-flex section-light e-con e-child" data-id=1d281e4 data-element_type=container><div
 class="entrance-animation elementor-element elementor-element-dcbaf90 elementor-widget elementor-widget-learnpress_list_courses" data-anime={&quot;duration&quot;:1200,&quot;staggervalue&quot;:150,&quot;easing&quot;:&quot;easeOutQuad&quot;,&quot;opacity&quot;:[0,1],&quot;translateY&quot;:[50,0]} data-id=dcbaf90 data-element_type=widget data-widget_type=learnpress_list_courses.default><div
 class=elementor-widget-container><div
-class=lp-archive-courses><ul
-class="learn-press-courses lp-list-courses-no-css" data-layout=grid
-data-size=10>
-<li
-class=course><div
-class=course-item data-id=747><div
-class=course-thumbnail><a
-href=https://crafto.themezaa.com/elearning/courses/business-accounting-and-taxation-fundamental/ ><div
-class=course-img><img
-decoding=async src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Business accounting and taxation fundamental" data-src-img=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-01.jpg data-src-webp=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-01.jpg.webp data-eio=j class=ewww_webp><noscript><img
-decoding=async src=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-01.jpg alt="Business accounting and taxation fundamental"></noscript></div></a></div><div
-class=course-content><h3 class="wap-course-title"><a
-class=course-permalink href=https://crafto.themezaa.com/elearning/courses/business-accounting-and-taxation-fundamental/ ><span
-class=course-title>Business accounting and taxation fundamental</span></a></h3><span
-class=course-featured>Featured</span><div
-class=course-instructor-category><div><label>by</label><div
-class=course-instructor><a
-href=https://crafto.themezaa.com/elearning/lp-profile/colene-landin/  > <span
-class=instructor-display-name>Colene Landin</span></a></div></div><div><label>in</label><div
-class=course-categories><a
-href=https://crafto.themezaa.com/elearning/course-category/design/ >Design</a></div></div></div><div
-class=course-wrap-meta><div
-class="meta-item meta-item-duration"><span
-class=course-duration>10 Weeks</span></div><div
-class="meta-item meta-item-level"><span
-class=course-level>All levels</span></div><div
-class="meta-item meta-item-lesson"><div
-class="course-count-item lp_lesson">5 Lessons</div></div><div
-class="meta-item meta-item-quiz"><div
-class="course-count-item lp_quiz">0 Quizzes</div></div><div
-class="meta-item meta-item-student"><div
-class=course-count-student>1 Student</div></div></div><div
-class=course-info><span
-class=course-price><span
-class=course-item-price> <span
-class=price>&#036;55.00</span> </span></span><div
-class=course-readmore><a
-href=https://crafto.themezaa.com/elearning/courses/business-accounting-and-taxation-fundamental/ >Read more</a></div></div></div></div></li><li
-class=course><div
-class=course-item data-id=739><div
-class=course-thumbnail><a
-href=https://crafto.themezaa.com/elearning/courses/finance-fundamentals-of-management-and-planning/ ><div
-class=course-img><img
-decoding=async src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Finance fundamentals of management and planning" data-src-img=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-02.jpg data-src-webp=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-02.jpg.webp data-eio=j class=ewww_webp><noscript><img
-decoding=async src=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-02.jpg alt="Finance fundamentals of management and planning"></noscript></div></a></div><div
-class=course-content><h3 class="wap-course-title"><a
-class=course-permalink href=https://crafto.themezaa.com/elearning/courses/finance-fundamentals-of-management-and-planning/ ><span
-class=course-title>Finance fundamentals of management and planning</span></a></h3><span
-class=course-featured>Featured</span><div
-class=course-instructor-category><div><label>by</label><div
-class=course-instructor><a
-href=https://crafto.themezaa.com/elearning/lp-profile/colene-landin/  > <span
-class=instructor-display-name>Colene Landin</span></a></div></div><div><label>in</label><div
-class=course-categories><a
-href=https://crafto.themezaa.com/elearning/course-category/finance/ >Finance</a></div></div></div><div
-class=course-wrap-meta><div
-class="meta-item meta-item-duration"><span
-class=course-duration>10 Weeks</span></div><div
-class="meta-item meta-item-level"><span
-class=course-level>All levels</span></div><div
-class="meta-item meta-item-lesson"><div
-class="course-count-item lp_lesson">7 Lessons</div></div><div
-class="meta-item meta-item-quiz"><div
-class="course-count-item lp_quiz">0 Quizzes</div></div><div
-class="meta-item meta-item-student"><div
-class=course-count-student>1 Student</div></div></div><div
-class=course-info><span
-class=course-price><span
-class=course-item-price> <span
-class=price>&#036;65.00</span> </span></span><div
-class=course-readmore><a
-href=https://crafto.themezaa.com/elearning/courses/finance-fundamentals-of-management-and-planning/ >Read more</a></div></div></div></div></li><li
-class=course><div
-class=course-item data-id=737><div
-class=course-thumbnail><a
-href=https://crafto.themezaa.com/elearning/courses/introduction-to-application-design-and-development/ ><div
-class=course-img><img
-decoding=async src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Introduction to application design and development" data-src-img=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-03.jpg data-src-webp=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-03.jpg.webp data-eio=j class=ewww_webp><noscript><img
-decoding=async src=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-03.jpg alt="Introduction to application design and development"></noscript></div></a></div><div
-class=course-content><h3 class="wap-course-title"><a
-class=course-permalink href=https://crafto.themezaa.com/elearning/courses/introduction-to-application-design-and-development/ ><span
-class=course-title>Introduction to application design and development</span></a></h3><span
-class=course-featured>Featured</span><div
-class=course-instructor-category><div><label>by</label><div
-class=course-instructor><a
-href=https://crafto.themezaa.com/elearning/lp-profile/colene-landin/  > <span
-class=instructor-display-name>Colene Landin</span></a></div></div><div><label>in</label><div
-class=course-categories><a
-href=https://crafto.themezaa.com/elearning/course-category/design/ >Design</a></div></div></div><div
-class=course-wrap-meta><div
-class="meta-item meta-item-duration"><span
-class=course-duration>10 Weeks</span></div><div
-class="meta-item meta-item-level"><span
-class=course-level>All levels</span></div><div
-class="meta-item meta-item-lesson"><div
-class="course-count-item lp_lesson">4 Lessons</div></div><div
-class="meta-item meta-item-quiz"><div
-class="course-count-item lp_quiz">0 Quizzes</div></div><div
-class="meta-item meta-item-student"><div
-class=course-count-student>0 Students</div></div></div><div
-class=course-info><span
-class=course-price><span
-class=course-item-price> <span
-class=price>&#036;80.00</span> </span></span><div
-class=course-readmore><a
-href=https://crafto.themezaa.com/elearning/courses/introduction-to-application-design-and-development/ >Read more</a></div></div></div></div></li><li
-class=course><div
-class=course-item data-id=728><div
-class=course-thumbnail><a
-href=https://crafto.themezaa.com/elearning/courses/genetic-testing-and-sequencing-technique/ ><div
-class=course-img><img
-decoding=async src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Genetic testing and sequencing technique" data-src-img=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-04.jpg data-src-webp=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-04.jpg.webp data-eio=j class=ewww_webp><noscript><img
-decoding=async src=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-04.jpg alt="Genetic testing and sequencing technique"></noscript></div></a></div><div
-class=course-content><h3 class="wap-course-title"><a
-class=course-permalink href=https://crafto.themezaa.com/elearning/courses/genetic-testing-and-sequencing-technique/ ><span
-class=course-title>Genetic testing and sequencing technique</span></a></h3><span
-class=course-featured>Featured</span><div
-class=course-instructor-category><div><label>by</label><div
-class=course-instructor><a
-href=https://crafto.themezaa.com/elearning/lp-profile/colene-landin/  > <span
-class=instructor-display-name>Colene Landin</span></a></div></div><div><label>in</label><div
-class=course-categories><a
-href=https://crafto.themezaa.com/elearning/course-category/medicine/ >Medicine</a></div></div></div><div
-class=course-wrap-meta><div
-class="meta-item meta-item-duration"><span
-class=course-duration>10 Weeks</span></div><div
-class="meta-item meta-item-level"><span
-class=course-level>All levels</span></div><div
-class="meta-item meta-item-lesson"><div
-class="course-count-item lp_lesson">5 Lessons</div></div><div
-class="meta-item meta-item-quiz"><div
-class="course-count-item lp_quiz">0 Quizzes</div></div><div
-class="meta-item meta-item-student"><div
-class=course-count-student>1 Student</div></div></div><div
-class=course-info><span
-class=course-price><span
-class=course-item-price> <span
-class=price>&#036;60.00</span> </span></span><div
-class=course-readmore><a
-href=https://crafto.themezaa.com/elearning/courses/genetic-testing-and-sequencing-technique/ >Read more</a></div></div></div></div></li><li
-class=course><div
-class=course-item data-id=694><div
-class=course-thumbnail><a
-href=https://crafto.themezaa.com/elearning/courses/introduction-to-web-design-and-visualization/ ><div
-class=course-img><img
-decoding=async src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Introduction to web design and visualization" data-src-img=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-05.jpg data-src-webp=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-05.jpg.webp data-eio=j class=ewww_webp><noscript><img
-decoding=async src=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-05.jpg alt="Introduction to web design and visualization"></noscript></div></a></div><div
-class=course-content><h3 class="wap-course-title"><a
-class=course-permalink href=https://crafto.themezaa.com/elearning/courses/introduction-to-web-design-and-visualization/ ><span
-class=course-title>Introduction to web design and visualization</span></a></h3><span
-class=course-featured>Featured</span><div
-class=course-instructor-category><div><label>by</label><div
-class=course-instructor><a
-href=https://crafto.themezaa.com/elearning/lp-profile/colene-landin/  > <span
-class=instructor-display-name>Colene Landin</span></a></div></div><div><label>in</label><div
-class=course-categories><a
-href=https://crafto.themezaa.com/elearning/course-category/design/ >Design</a></div></div></div><div
-class=course-wrap-meta><div
-class="meta-item meta-item-duration"><span
-class=course-duration>10 Weeks</span></div><div
-class="meta-item meta-item-level"><span
-class=course-level>All levels</span></div><div
-class="meta-item meta-item-lesson"><div
-class="course-count-item lp_lesson">4 Lessons</div></div><div
-class="meta-item meta-item-quiz"><div
-class="course-count-item lp_quiz">0 Quizzes</div></div><div
-class="meta-item meta-item-student"><div
-class=course-count-student>0 Students</div></div></div><div
-class=course-info><span
-class=course-price><span
-class=course-item-price> <span
-class=price>&#036;70.00</span> </span></span><div
-class=course-readmore><a
-href=https://crafto.themezaa.com/elearning/courses/introduction-to-web-design-and-visualization/ >Read more</a></div></div></div></div></li><li
-class=course><div
-class=course-item data-id=636><div
-class=course-thumbnail><a
-href=https://crafto.themezaa.com/elearning/courses/improve-your-english-vocabulary-and-language/ ><div
-class=course-img><img
-decoding=async src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Improve your english vocabulary and language" data-src-img=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-06.jpg data-src-webp=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-06.jpg.webp data-eio=j class=ewww_webp><noscript><img
-decoding=async src=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-courses-06.jpg alt="Improve your english vocabulary and language"></noscript></div></a></div><div
-class=course-content><h3 class="wap-course-title"><a
-class=course-permalink href=https://crafto.themezaa.com/elearning/courses/improve-your-english-vocabulary-and-language/ ><span
-class=course-title>Improve your english vocabulary and language</span></a></h3><span
-class=course-featured>Featured</span><div
-class=course-instructor-category><div><label>by</label><div
-class=course-instructor><a
-href=https://crafto.themezaa.com/elearning/lp-profile/colene-landin/  > <span
-class=instructor-display-name>Colene Landin</span></a></div></div><div><label>in</label><div
-class=course-categories><a
-href=https://crafto.themezaa.com/elearning/course-category/business/ >Business</a></div></div></div><div
-class=course-wrap-meta><div
-class="meta-item meta-item-duration"><span
-class=course-duration>10 Weeks</span></div><div
-class="meta-item meta-item-level"><span
-class=course-level>All levels</span></div><div
-class="meta-item meta-item-lesson"><div
-class="course-count-item lp_lesson">4 Lessons</div></div><div
-class="meta-item meta-item-quiz"><div
-class="course-count-item lp_quiz">0 Quizzes</div></div><div
-class="meta-item meta-item-student"><div
-class=course-count-student>1 Student</div></div></div><div
-class=course-info><span
-class=course-price><span
-class=course-item-price> <span
-class=price>&#036;45.00</span> </span></span><div
-class=course-readmore><a
-href=https://crafto.themezaa.com/elearning/courses/improve-your-english-vocabulary-and-language/ >Read more</a></div></div></div></div></li></ul></div></div></div></div><div
+class=lp-archive-courses><ul class="learn-press-courses lp-list-courses-no-css" data-layout=grid data-size=10><li class=course><div class=course-item data-id=ph001><div class=course-thumbnail><a href=https://play.google.com/store/apps/details?id=co.white.iebqk><div class=course-img><img decoding=async src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=400&q=80&fit=crop" alt="Engineering Mathematics" style="width:100%;height:200px;object-fit:cover;"></div></a></div><div class=course-content><h3 class="wap-course-title"><a class=course-permalink href=https://play.google.com/store/apps/details?id=co.white.iebqk><span class=course-title>Engineering Mathematics</span></a></h3><span class=course-featured>Featured</span><div class=course-instructor-category><div><label>by</label><div class=course-instructor><a href=https://play.google.com/store/apps/details?id=co.white.iebqk> <span class=instructor-display-name>Purple Hat Institute</span></a></div></div><div><label>in</label><div class=course-categories><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Mathematics</a></div></div></div><div class=course-wrap-meta><div class="meta-item meta-item-duration"><span class=course-duration>12 Weeks</span></div><div class="meta-item meta-item-level"><span class=course-level>Beginner</span></div><div class="meta-item meta-item-lesson"><div class="course-count-item lp_lesson">20 Lessons</div></div><div class="meta-item meta-item-quiz"><div class="course-count-item lp_quiz">5 Quizzes</div></div><div class="meta-item meta-item-student"><div class=course-count-student>320 Students</div></div></div><div class=course-info><span class=course-price><span class=course-item-price> <span class=price>&#8377;999</span> </span></span><div class=course-readmore><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Enroll Now</a></div></div></div></div></li><li class=course><div class=course-item data-id=ph002><div class=course-thumbnail><a href=https://play.google.com/store/apps/details?id=co.white.iebqk><div class=course-img><img decoding=async src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80&fit=crop" alt="Basic Electrical Engineering" style="width:100%;height:200px;object-fit:cover;"></div></a></div><div class=course-content><h3 class="wap-course-title"><a class=course-permalink href=https://play.google.com/store/apps/details?id=co.white.iebqk><span class=course-title>Basic Electrical Engineering</span></a></h3><span class=course-featured>Featured</span><div class=course-instructor-category><div><label>by</label><div class=course-instructor><a href=https://play.google.com/store/apps/details?id=co.white.iebqk> <span class=instructor-display-name>Purple Hat Institute</span></a></div></div><div><label>in</label><div class=course-categories><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Engineering</a></div></div></div><div class=course-wrap-meta><div class="meta-item meta-item-duration"><span class=course-duration>10 Weeks</span></div><div class="meta-item meta-item-level"><span class=course-level>All levels</span></div><div class="meta-item meta-item-lesson"><div class="course-count-item lp_lesson">15 Lessons</div></div><div class="meta-item meta-item-quiz"><div class="course-count-item lp_quiz">4 Quizzes</div></div><div class="meta-item meta-item-student"><div class=course-count-student>285 Students</div></div></div><div class=course-info><span class=course-price><span class=course-item-price> <span class=price>&#8377;799</span> </span></span><div class=course-readmore><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Enroll Now</a></div></div></div></div></li><li class=course><div class=course-item data-id=ph003><div class=course-thumbnail><a href=https://play.google.com/store/apps/details?id=co.white.iebqk><div class=course-img><img decoding=async src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80&fit=crop" alt="Engineering Drawing" style="width:100%;height:200px;object-fit:cover;"></div></a></div><div class=course-content><h3 class="wap-course-title"><a class=course-permalink href=https://play.google.com/store/apps/details?id=co.white.iebqk><span class=course-title>Engineering Drawing</span></a></h3><span class=course-featured>Featured</span><div class=course-instructor-category><div><label>by</label><div class=course-instructor><a href=https://play.google.com/store/apps/details?id=co.white.iebqk> <span class=instructor-display-name>Purple Hat Institute</span></a></div></div><div><label>in</label><div class=course-categories><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Engineering</a></div></div></div><div class=course-wrap-meta><div class="meta-item meta-item-duration"><span class=course-duration>8 Weeks</span></div><div class="meta-item meta-item-level"><span class=course-level>Beginner</span></div><div class="meta-item meta-item-lesson"><div class="course-count-item lp_lesson">12 Lessons</div></div><div class="meta-item meta-item-quiz"><div class="course-count-item lp_quiz">3 Quizzes</div></div><div class="meta-item meta-item-student"><div class=course-count-student>410 Students</div></div></div><div class=course-info><span class=course-price><span class=course-item-price> <span class=price>&#8377;699</span> </span></span><div class=course-readmore><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Enroll Now</a></div></div></div></div></li><li class=course><div class=course-item data-id=ph004><div class=course-thumbnail><a href=https://play.google.com/store/apps/details?id=co.white.iebqk><div class=course-img><img decoding=async src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&q=80&fit=crop" alt="Data Structures & Algorithms" style="width:100%;height:200px;object-fit:cover;"></div></a></div><div class=course-content><h3 class="wap-course-title"><a class=course-permalink href=https://play.google.com/store/apps/details?id=co.white.iebqk><span class=course-title>Data Structures & Algorithms</span></a></h3><span class=course-featured>Featured</span><div class=course-instructor-category><div><label>by</label><div class=course-instructor><a href=https://play.google.com/store/apps/details?id=co.white.iebqk> <span class=instructor-display-name>Purple Hat Institute</span></a></div></div><div><label>in</label><div class=course-categories><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Computer Science</a></div></div></div><div class=course-wrap-meta><div class="meta-item meta-item-duration"><span class=course-duration>16 Weeks</span></div><div class="meta-item meta-item-level"><span class=course-level>Intermediate</span></div><div class="meta-item meta-item-lesson"><div class="course-count-item lp_lesson">25 Lessons</div></div><div class="meta-item meta-item-quiz"><div class="course-count-item lp_quiz">8 Quizzes</div></div><div class="meta-item meta-item-student"><div class=course-count-student>190 Students</div></div></div><div class=course-info><span class=course-price><span class=course-item-price> <span class=price>&#8377;1,299</span> </span></span><div class=course-readmore><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Enroll Now</a></div></div></div></div></li><li class=course><div class=course-item data-id=ph005><div class=course-thumbnail><a href=https://play.google.com/store/apps/details?id=co.white.iebqk><div class=course-img><img decoding=async src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=400&q=80&fit=crop" alt="Engineering Physics" style="width:100%;height:200px;object-fit:cover;"></div></a></div><div class=course-content><h3 class="wap-course-title"><a class=course-permalink href=https://play.google.com/store/apps/details?id=co.white.iebqk><span class=course-title>Engineering Physics</span></a></h3><span class=course-featured>Featured</span><div class=course-instructor-category><div><label>by</label><div class=course-instructor><a href=https://play.google.com/store/apps/details?id=co.white.iebqk> <span class=instructor-display-name>Purple Hat Institute</span></a></div></div><div><label>in</label><div class=course-categories><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Science</a></div></div></div><div class=course-wrap-meta><div class="meta-item meta-item-duration"><span class=course-duration>12 Weeks</span></div><div class="meta-item meta-item-level"><span class=course-level>Beginner</span></div><div class="meta-item meta-item-lesson"><div class="course-count-item lp_lesson">18 Lessons</div></div><div class="meta-item meta-item-quiz"><div class="course-count-item lp_quiz">5 Quizzes</div></div><div class="meta-item meta-item-student"><div class=course-count-student>255 Students</div></div></div><div class=course-info><span class=course-price><span class=course-item-price> <span class=price>&#8377;899</span> </span></span><div class=course-readmore><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Enroll Now</a></div></div></div></div></li><li class=course><div class=course-item data-id=ph006><div class=course-thumbnail><a href=https://play.google.com/store/apps/details?id=co.white.iebqk><div class=course-img><img decoding=async src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80&fit=crop" alt="Digital Electronics" style="width:100%;height:200px;object-fit:cover;"></div></a></div><div class=course-content><h3 class="wap-course-title"><a class=course-permalink href=https://play.google.com/store/apps/details?id=co.white.iebqk><span class=course-title>Digital Electronics</span></a></h3><span class=course-featured>Featured</span><div class=course-instructor-category><div><label>by</label><div class=course-instructor><a href=https://play.google.com/store/apps/details?id=co.white.iebqk> <span class=instructor-display-name>Purple Hat Institute</span></a></div></div><div><label>in</label><div class=course-categories><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Electronics</a></div></div></div><div class=course-wrap-meta><div class="meta-item meta-item-duration"><span class=course-duration>10 Weeks</span></div><div class="meta-item meta-item-level"><span class=course-level>All levels</span></div><div class="meta-item meta-item-lesson"><div class="course-count-item lp_lesson">16 Lessons</div></div><div class="meta-item meta-item-quiz"><div class="course-count-item lp_quiz">4 Quizzes</div></div><div class="meta-item meta-item-student"><div class=course-count-student>175 Students</div></div></div><div class=course-info><span class=course-price><span class=course-item-price> <span class=price>&#8377;999</span> </span></span><div class=course-readmore><a href=https://play.google.com/store/apps/details?id=co.white.iebqk>Enroll Now</a></div></div></div></div></li></ul></div></div></div></div><div
 class="entrance-animation  elementor-element elementor-element-cd0bb53 e-con-full e-flex section-light e-con e-child" data-anime={&quot;duration&quot;:600,&quot;staggervalue&quot;:100,&quot;easing&quot;:&quot;easeOutQuad&quot;,&quot;opacity&quot;:[0,1]} data-id=cd0bb53 data-element_type=container><div
 class="elementor-element elementor-element-33787e8 elementor-widget elementor-widget-crafto-heading" data-id=33787e8 data-element_type=widget data-widget_type=crafto-heading.default><div
 class=elementor-widget-container><div
@@ -1027,7 +781,7 @@ class="elementor-element elementor-element-2a2bbed elementor-mobile_extra-align-
 class=elementor-widget-container><div
 class="elementor-button-wrapper crafto-button-wrapper">
 <a
-class="elementor-button btn-icon-right elementor-button-link default elementor-size-md " role=button href=https://crafto.themezaa.com/elearning/courses/ ><div
+class="elementor-button btn-icon-right elementor-button-link default elementor-size-md " role=button href=https://play.google.com/store/apps/details?id=co.white.iebqk ><div
 class=elementor-button-content-wrapper>
 <span
 class=elementor-button-text>Explore all courses</span>
@@ -1110,7 +864,7 @@ class="elementor-element elementor-element-049019a e-transform elementor-widget 
 class=elementor-widget-container><div
 class="elementor-button-wrapper crafto-button-wrapper">
 <a
-class="elementor-button btn-icon-right elementor-button-link default elementor-size-md elementor-animation-btn-switch-text btn-custom-effect" role=button href=https://crafto.themezaa.com/elearning/courses/ ><div
+class="elementor-button btn-icon-right elementor-button-link default elementor-size-md elementor-animation-btn-switch-text btn-custom-effect" role=button href=https://play.google.com/store/apps/details?id=co.white.iebqk ><div
 class=elementor-button-content-wrapper>
 <span
 class=elementor-button-text data-btn-text="Explore courses">Explore courses</span>
@@ -1173,7 +927,7 @@ class=elementor-widget-container><h2 class="crafto-heading"><span
 class=crafto-primary-title>Trusted by genius people.</span></h2></div></div><div
 class="elementor-element elementor-element-e755ac3 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-id=e755ac3 data-element_type=widget data-widget_type=text-editor.default><div
 class=elementor-widget-container>
-Lorem ipsum dolor sit amet consectetur adipiscing elit venenatis dictum nec.</div></div><div
+Real students. Real results. Hear what they say about Purple Hat Institute.</div></div><div
 class="elementor-element elementor-element-4f86ecc elementor-widget elementor-widget-crafto-content-block" data-id=4f86ecc data-element_type=widget data-settings={&quot;crafto_content_block_style&quot;:&quot;block-style-1&quot;} data-widget_type=crafto-content-block.default><div
 class=elementor-widget-container><div
 class="content-block content-block-style-1"><h2							class="number">
@@ -1188,7 +942,7 @@ class="swiper testimonial-carousel testimonial-carousel-style-17 magic-cursor cu
 class=swiper-wrapper><div
 class="elementor-repeater-item-e09748e swiper-slide"><div
 class=testimonials-wrapper><div
-class=testimonials-carousel-image-box style="background-image: url(https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-04.jpg);"></div><div
+class=testimonials-carousel-image-box style="background-image: url(student1.jpg); background-size:cover; background-position:center;"></div><div
 class=carousel-content-wrap><div><div
 class="review-star-icon testimonial-review"><div
 class=elementor-star-rating><i
@@ -1198,15 +952,15 @@ class=elementor-star-full></i><i
 class=elementor-star-full></i><i
 class=elementor-star-full></i></div></div></div><div
 class=testimonial-carousel-content>
-Course materials were good, the mentoring approach was good and working with other people via the internet was good.</div><div
+Purple Hat ने माझे Engineering एकदम सोपे केले! Mangesh Sir च्या teaching style मुळे मला सगळे concepts clearly समजले. Sem 4 मध्ये मला 82% मिळाले!</div><div
 class=testimonial-carousel-name>
-Charlotte smith</div>
+Priya Sharma</div>
 <span
 class=testimonial-carousel-position>
-Business owner	</span></div></div></div><div
+BE Electronics, Pune	</span></div></div></div><div
 class="elementor-repeater-item-180ad5f swiper-slide"><div
 class=testimonials-wrapper><div
-class=testimonials-carousel-image-box style="background-image: url(https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-05.jpg);"></div><div
+class=testimonials-carousel-image-box style="background-image: url(student2.jpg); background-size:cover; background-position:center;"></div><div
 class=carousel-content-wrap><div><div
 class="review-star-icon testimonial-review"><div
 class=elementor-star-rating><i
@@ -1216,15 +970,15 @@ class=elementor-star-full></i><i
 class=elementor-star-full></i><i
 class=elementor-star-full></i></div></div></div><div
 class=testimonial-carousel-content>
-Course materials were good, the mentoring approach was good and working with other people via the internet was good.</div><div
+App वर lectures बघून Exam ची तयारी केली. BEE subject मध्ये पहिल्यांदाच Distinction आला! Purple Hat शिवाय हे शक्यच नव्हते.</div><div
 class=testimonial-carousel-name>
-Herman miller</div>
+Rohit Patil</div>
 <span
 class=testimonial-carousel-position>
-Behavioral science	</span></div></div></div><div
+Diploma Mechanical, Nashik	</span></div></div></div><div
 class="elementor-repeater-item-4c5f38d swiper-slide"><div
 class=testimonials-wrapper><div
-class=testimonials-carousel-image-box style="background-image: url(https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/03/demo-elearning-06.jpg);"></div><div
+class=testimonials-carousel-image-box style="background-image: url(student3.jpg); background-size:cover; background-position:center;"></div><div
 class=carousel-content-wrap><div><div
 class="review-star-icon testimonial-review"><div
 class=elementor-star-rating><i
@@ -1234,12 +988,12 @@ class=elementor-star-full></i><i
 class=elementor-star-full></i><i
 class=elementor-star-full></i></div></div></div><div
 class=testimonial-carousel-content>
-Course materials were good, the mentoring approach was good and working with other people via the internet was good.</div><div
+Marathi मध्ये Engineering शिकणे हे खूप comfortable वाटते. Notes, videos सगळे एकाच app मध्ये. Engineering Drawing मध्ये A grade मिळाला!</div><div
 class=testimonial-carousel-name>
-Matthew taylor</div>
+Sneha Jadhav</div>
 <span
 class=testimonial-carousel-position>
-Network security	</span></div></div></div></div><div
+BE Civil, Nashik	</span></div></div></div></div><div
 class="elementor-swiper-button elementor-swiper-button-prev">
 <svg
 xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24" fill=#232323><path
@@ -1318,7 +1072,7 @@ class="elementor-element elementor-element-9a38ba0 elementor-widget elementor-wi
 class=elementor-widget-container><div
 class="elementor-button-wrapper crafto-button-wrapper">
 <a
-class="elementor-button btn-icon-right elementor-button-link default elementor-size-md elementor-animation-btn-switch-icon btn-custom-effect" role=button href=https://crafto.themezaa.com/elearning/blog/ ><div
+class="elementor-button btn-icon-right elementor-button-link default elementor-size-md elementor-animation-btn-switch-icon btn-custom-effect" role=button href=https://play.google.com/store/apps/details?id=co.white.iebqk ><div
 class=elementor-button-content-wrapper>
 <span
 class=elementor-button-text>Explore all articles</span>
@@ -1346,13 +1100,13 @@ class="post-meta d-flex align-items-center">
 <span
 class=author-name>
 <a
-href=https://crafto.themezaa.com/elearning/author/colene-landin/ >
+href=https://play.google.com/store/apps/details?id=co.white.iebqk >
 <img
 src=https://crafto.themezaa.com/elearning/wp-content/uploads/learn-press-profile/1/1a0b9fd80d62517f55be07aa844ebdd2.png srcset='https://crafto.themezaa.com/elearning/wp-content/uploads/learn-press-profile/1/1a0b9fd80d62517f55be07aa844ebdd2.png 2x' class='avatar avatar-30 photo' height=30 width=30 decoding=async>		<span
 class=screen-reader-text>Author</span>
 </a>
 <span>By&nbsp;<a
-href=https://crafto.themezaa.com/elearning/author/colene-landin/ >Colene Landin<span
+href=https://play.google.com/store/apps/details?id=co.white.iebqk >Colene Landin<span
 class=screen-reader-text>Author</span></a></span>
 </span>
 <span
@@ -1364,7 +1118,7 @@ class=posts-like-count>77</span><span
 class=posts-like>Likes</span></a>		</span></div><div
 class=blog-post-images>
 <a
-href=https://crafto.themezaa.com/elearning/how-to-evaluate-the-effective-of-training-programs-2/ target=_self class=image-link aria-label=demo-elearning-07>
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_self class=image-link aria-label=demo-elearning-07>
 <img
 loading=lazy decoding=async width=600 height=430 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-crafto-blog-grid-thumb size-crafto-blog-grid-thumb wp-post-image ewww_webp" alt=demo-elearning-07 data-src-img=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/10/demo-elearning-07-600x430.jpg data-src-webp=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/10/demo-elearning-07-600x430.jpg.webp data-eio=j><noscript><img
 loading=lazy decoding=async width=600 height=430 src=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/10/demo-elearning-07-600x430.jpg class="attachment-crafto-blog-grid-thumb size-crafto-blog-grid-thumb wp-post-image" alt=demo-elearning-07></noscript>		<span
@@ -1372,7 +1126,7 @@ class=screen-reader-text>Post Thumbnail</span>
 </a></div><div
 class=post-details>
 <a
-href=https://crafto.themezaa.com/elearning/how-to-evaluate-the-effective-of-training-programs-2/ target=_self class=entry-title>How to evaluate the effective of training programs.</a><div
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_self class=entry-title>How to evaluate the effective of training programs.</a><div
 class=entry-content>
 Lorem ipsum has been industry standard dummy text ever...</div></div></div>
 </li>
@@ -1383,13 +1137,13 @@ class="post-meta d-flex align-items-center">
 <span
 class=author-name>
 <a
-href=https://crafto.themezaa.com/elearning/author/colene-landin/ >
+href=https://play.google.com/store/apps/details?id=co.white.iebqk >
 <img
 src=https://crafto.themezaa.com/elearning/wp-content/uploads/learn-press-profile/1/1a0b9fd80d62517f55be07aa844ebdd2.png srcset='https://crafto.themezaa.com/elearning/wp-content/uploads/learn-press-profile/1/1a0b9fd80d62517f55be07aa844ebdd2.png 2x' class='avatar avatar-30 photo' height=30 width=30 decoding=async>		<span
 class=screen-reader-text>Author</span>
 </a>
 <span>By&nbsp;<a
-href=https://crafto.themezaa.com/elearning/author/colene-landin/ >Colene Landin<span
+href=https://play.google.com/store/apps/details?id=co.white.iebqk >Colene Landin<span
 class=screen-reader-text>Author</span></a></span>
 </span>
 <span
@@ -1401,7 +1155,7 @@ class=posts-like-count>79</span><span
 class=posts-like>Likes</span></a>		</span></div><div
 class=blog-post-images>
 <a
-href=https://crafto.themezaa.com/elearning/experience-the-breathtaking-views-and-perspectives-2/ target=_self class=image-link aria-label=demo-elearning-08>
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_self class=image-link aria-label=demo-elearning-08>
 <img
 loading=lazy decoding=async width=600 height=430 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-crafto-blog-grid-thumb size-crafto-blog-grid-thumb wp-post-image ewww_webp" alt=demo-elearning-08 data-src-img=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/10/demo-elearning-08-600x430.jpg data-src-webp=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/10/demo-elearning-08-600x430.jpg.webp data-eio=j><noscript><img
 loading=lazy decoding=async width=600 height=430 src=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/10/demo-elearning-08-600x430.jpg class="attachment-crafto-blog-grid-thumb size-crafto-blog-grid-thumb wp-post-image" alt=demo-elearning-08></noscript>		<span
@@ -1409,7 +1163,7 @@ class=screen-reader-text>Post Thumbnail</span>
 </a></div><div
 class=post-details>
 <a
-href=https://crafto.themezaa.com/elearning/experience-the-breathtaking-views-and-perspectives-2/ target=_self class=entry-title>Experience the breathtaking views and perspectives.</a><div
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_self class=entry-title>Experience the breathtaking views and perspectives.</a><div
 class=entry-content>
 Lorem ipsum has been industry standard dummy text ever...</div></div></div>
 </li>
@@ -1420,13 +1174,13 @@ class="post-meta d-flex align-items-center">
 <span
 class=author-name>
 <a
-href=https://crafto.themezaa.com/elearning/author/colene-landin/ >
+href=https://play.google.com/store/apps/details?id=co.white.iebqk >
 <img
 src=https://crafto.themezaa.com/elearning/wp-content/uploads/learn-press-profile/1/1a0b9fd80d62517f55be07aa844ebdd2.png srcset='https://crafto.themezaa.com/elearning/wp-content/uploads/learn-press-profile/1/1a0b9fd80d62517f55be07aa844ebdd2.png 2x' class='avatar avatar-30 photo' height=30 width=30 decoding=async>		<span
 class=screen-reader-text>Author</span>
 </a>
 <span>By&nbsp;<a
-href=https://crafto.themezaa.com/elearning/author/colene-landin/ >Colene Landin<span
+href=https://play.google.com/store/apps/details?id=co.white.iebqk >Colene Landin<span
 class=screen-reader-text>Author</span></a></span>
 </span>
 <span
@@ -1438,7 +1192,7 @@ class=posts-like-count>75</span><span
 class=posts-like>Likes</span></a>		</span></div><div
 class=blog-post-images>
 <a
-href=https://crafto.themezaa.com/elearning/build-up-healthy-habits-and-strong-peaceful-life-2/ target=_self class=image-link aria-label=demo-elearning-09>
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_self class=image-link aria-label=demo-elearning-09>
 <img
 loading=lazy decoding=async width=600 height=430 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-crafto-blog-grid-thumb size-crafto-blog-grid-thumb wp-post-image ewww_webp" alt=demo-elearning-09 data-src-img=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/10/demo-elearning-09-600x430.jpg data-src-webp=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/10/demo-elearning-09-600x430.jpg.webp data-eio=j><noscript><img
 loading=lazy decoding=async width=600 height=430 src=https://crafto.themezaa.com/elearning/wp-content/uploads/sites/28/2024/10/demo-elearning-09-600x430.jpg class="attachment-crafto-blog-grid-thumb size-crafto-blog-grid-thumb wp-post-image" alt=demo-elearning-09></noscript>		<span
@@ -1446,7 +1200,7 @@ class=screen-reader-text>Post Thumbnail</span>
 </a></div><div
 class=post-details>
 <a
-href=https://crafto.themezaa.com/elearning/build-up-healthy-habits-and-strong-peaceful-life-2/ target=_self class=entry-title>Build up healthy habits and strong peaceful life.</a><div
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_self class=entry-title>Build up healthy habits and strong peaceful life.</a><div
 class=entry-content>
 Lorem ipsum has been industry standard dummy text ever...</div></div></div>
 </li></ul></div></div></div><div
@@ -1463,7 +1217,7 @@ class="elementor-element elementor-element-bc2ee03 elementor-widget elementor-wi
 class=elementor-widget-container><div
 class="crafto-heading no-shadow-animation"><span
 class=crafto-primary-title>Looking for help? <a
-href=https://crafto.themezaa.com/elearning/contact/ ><span
+href=https://play.google.com/store/apps/details?id=co.white.iebqk ><span
 class=separator> Contact us today </span></a></span></div></div></div></div><div
 class="entrance-animation  elementor-element elementor-element-eb93116 e-con-full e-flex section-light e-con e-child" data-anime={&quot;duration&quot;:600,&quot;staggervalue&quot;:300,&quot;easing&quot;:&quot;easeOutQuad&quot;,&quot;opacity&quot;:[0,1],&quot;translateX&quot;:[50,0]} data-id=eb93116 data-element_type=container><div
 class="elementor-element elementor-element-d9071ea elementor-view-default elementor-widget elementor-widget-icon" data-id=d9071ea data-element_type=widget data-widget_type=icon.default><div
@@ -1556,40 +1310,27 @@ class=elementor-widget-container><div
 class="default social-icons-wrapper"><ul >
 <li>
 <a
-class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-9a3368c " aria-label=Social-icon href=https://www.facebook.com/ target=_blank>
-<span
-class=elementor-screen-only></span>
-<span
-class="social-icon-text alt-font">
-Fb.	</span>
+class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-9a3368c " aria-label=YouTube href=https://www.youtube.com/@PURPLEHAT target=_blank>
+<span class=elementor-screen-only></span>
+<span class="social-icon-text alt-font">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+</span>
 </a>
 </li>
 <li>
-<a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-68b1164 " aria-label=Social-icon href="https://www.instagram.com" target=_blank>
-<span
-class=elementor-screen-only></span>
-<span
-class="social-icon-text alt-font">
-Ig.	</span>
+<a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-68b1164 " aria-label=Instagram href="https://www.instagram.com/purplehatinstitute/" target=_blank>
+<span class=elementor-screen-only></span>
+<span class="social-icon-text alt-font">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+</span>
 </a>
 </li>
 <li>
-<a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-35ad691 " aria-label=Social-icon href="https://www.twitter.com" target=_blank>
-<span
-class=elementor-screen-only></span>
-<span
-class="social-icon-text alt-font">
-Tw.	</span>
-</a>
-</li>
-<li>
-<a
-class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-2b10291 " aria-label=Social-icon href=http://www.behance.com/ target=_blank>
-<span
-class=elementor-screen-only></span>
-<span
-class="social-icon-text alt-font">
-Be.	</span>
+<a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-35ad691 " aria-label=LinkedIn href="https://www.linkedin.com/in/purple-hat-institute-891418359/" target=_blank>
+<span class=elementor-screen-only></span>
+<span class="social-icon-text alt-font">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+</span>
 </a>
 </li></ul></div></div></div></div><div
 class=" elementor-element elementor-element-25db4787 e-con-full e-flex section-light e-con e-child" data-id=25db4787 data-element_type=container><div
@@ -1602,20 +1343,20 @@ class=elementor-widget-container><div
 class=crafto-navigation-wrapper><ul
 id=menu-footer-popular-courses-menu class="menu crafto-navigation-link crafto-simple-menu"><li
 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1764 item-depth-0"><a
-href=https://crafto.themezaa.com/elearning/courses/ class="left-menu-nav-link before"><div
-class=submenu-icon-content><span>Business finance</span></div></a></li>
+href=https://play.google.com/store/apps/details?id=co.white.iebqk class="left-menu-nav-link before"><div
+class=submenu-icon-content><span>Engineering Mathematics</span></div></a></li>
 <li
 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1765 item-depth-0"><a
-href=https://crafto.themezaa.com/elearning/courses/ class="left-menu-nav-link before"><div
-class=submenu-icon-content><span>Advanced design</span></div></a></li>
+href=https://play.google.com/store/apps/details?id=co.white.iebqk class="left-menu-nav-link before"><div
+class=submenu-icon-content><span>Basic Electrical Engineering</span></div></a></li>
 <li
 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1766 item-depth-0"><a
-href=https://crafto.themezaa.com/elearning/courses/ class="left-menu-nav-link before"><div
-class=submenu-icon-content><span>Web development</span></div></a></li>
+href=https://play.google.com/store/apps/details?id=co.white.iebqk class="left-menu-nav-link before"><div
+class=submenu-icon-content><span>Engineering Drawing</span></div></a></li>
 <li
 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1767 item-depth-0"><a
-href=https://crafto.themezaa.com/elearning/courses/ class="left-menu-nav-link before"><div
-class=submenu-icon-content><span>Data visualization</span></div></a></li></ul></div></div></div></div><div
+href=https://play.google.com/store/apps/details?id=co.white.iebqk class="left-menu-nav-link before"><div
+class=submenu-icon-content><span>Data Structures & Algorithms</span></div></a></li></ul></div></div></div></div><div
 class=" elementor-element elementor-element-3c7ccb5 e-con-full e-flex section-light e-con e-child" data-id=3c7ccb5 data-element_type=container><div
 class="elementor-element elementor-element-175e50a elementor-widget elementor-widget-crafto-heading" data-id=175e50a data-element_type=widget data-widget_type=crafto-heading.default><div
 class=elementor-widget-container>
@@ -1711,27 +1452,15 @@ class=submenu-icon-content><span>Home</span></div></a></li>
 <li
 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601 item-depth-0"><a
 href=about.html class="left-menu-nav-link before"><div
-class=submenu-icon-content><span>About</span></div></a></li>
-<li
-class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3060 item-depth-0"><a
-href=index.html# class="left-menu-nav-link before"><div
-class=submenu-icon-content><span>Courses</span></div></a></li>
-<li
-class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3233 item-depth-0"><a
-href=index.html# class="left-menu-nav-link before"><div
-class=submenu-icon-content><span>Instructors</span></div></a></li>
-<li
-class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617 item-depth-0"><a
-href=index.html# class="left-menu-nav-link before"><div
-class=submenu-icon-content><span>Testimonial</span></div></a></li>
-<li
-class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1610 item-depth-0"><a
-href=index.html# class="left-menu-nav-link before"><div
-class=submenu-icon-content><span>Blog</span></div></a></li>
+class=submenu-icon-content><span>About Us</span></div></a></li>
+
+
+
+
 <li
 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1606 item-depth-0"><a
 href=contact.html class="left-menu-nav-link before"><div
-class=submenu-icon-content><span>Contact</span></div></a></li></ul></div></div></div></div><div
+class=submenu-icon-content><span>Contact Us</span></div></a></li></ul></div></div></div></div><div
 class=" elementor-element elementor-element-64621a1f e-con-full e-flex section-light e-con e-child" data-id=64621a1f data-element_type=container><div
 class="elementor-element elementor-element-52d1980e elementor-widget elementor-widget-crafto-heading" data-id=52d1980e data-element_type=widget data-widget_type=crafto-heading.default><div
 class=elementor-widget-container><div
@@ -1771,7 +1500,7 @@ class=" elementor-element elementor-element-58a413c0 e-con-full e-flex section-l
 class="elementor-element elementor-element-7c3ecea2 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=7c3ecea2 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/corporate/ target=_blank class=image-link aria-label=demo-corporate.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-corporate.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1786,7 +1515,7 @@ class=" elementor-element elementor-element-5eabdbc e-con-full e-flex section-li
 class="elementor-element elementor-element-711bb23 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=711bb23 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/restaurant/ target=_blank class=image-link aria-label=demo-restaurant.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-restaurant.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1801,7 +1530,7 @@ class=" elementor-element elementor-element-6ddce8ea e-con-full e-flex section-l
 class="elementor-element elementor-element-5fa9933d elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=5fa9933d data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/branding-agency/ target=_blank class=image-link aria-label=demo-branding-agency.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-branding-agency.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1816,7 +1545,7 @@ class=" elementor-element elementor-element-6679a305 e-con-full e-flex section-l
 class="elementor-element elementor-element-6fb3391a elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=6fb3391a data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/elearning/ target=_blank class=image-link aria-label=demo-elearning.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-elearning.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1831,7 +1560,7 @@ class=" elementor-element elementor-element-7aa4f61a e-con-full e-flex section-l
 class="elementor-element elementor-element-1bf45644 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=1bf45644 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/it-business/ target=_blank class=image-link aria-label=demo-it-business.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-it-business.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1846,7 +1575,7 @@ class=" elementor-element elementor-element-6e96fd56 e-con-full e-flex section-l
 class="elementor-element elementor-element-44abe6d0 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=44abe6d0 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/data-analysis/ target=_blank class=image-link aria-label=demo-data-analysis.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-data-analysis.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1861,7 +1590,7 @@ class=" elementor-element elementor-element-8e1673d e-con-full e-flex section-li
 class="elementor-element elementor-element-5059a0ed elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=5059a0ed data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/hotel-and-resort/ target=_blank class=image-link aria-label=demo-hotel-and-resort.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-hotel-and-resort.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1876,7 +1605,7 @@ class=" elementor-element elementor-element-13fa6e35 e-con-full e-flex section-l
 class="elementor-element elementor-element-69c6a2db elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=69c6a2db data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/scattered-portfolio/ target=_blank class=image-link aria-label=demo-scattered-portfolio.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-scattered-portfolio.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1891,7 +1620,7 @@ class=" elementor-element elementor-element-4ace2e7d e-con-full e-flex section-l
 class="elementor-element elementor-element-c6e2edf elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=c6e2edf data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/beauty-salon/ target=_blank class=image-link aria-label=demo-beauty-salon.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-beauty-salon.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1906,7 +1635,7 @@ class=" elementor-element elementor-element-7ed8a77b e-con-full e-flex section-l
 class="elementor-element elementor-element-56affb86 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=56affb86 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/product-showcase/ target=_blank class=image-link aria-label=demo-product.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-product.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1921,7 +1650,7 @@ class=" elementor-element elementor-element-6cc96ccd e-con-full e-flex section-l
 class="elementor-element elementor-element-32b6bd34 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=32b6bd34 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/medical/ target=_blank class=image-link aria-label=demo-medical.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-medical.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1936,7 +1665,7 @@ class=" elementor-element elementor-element-5d036b3c e-con-full e-flex section-l
 class="elementor-element elementor-element-44d317ac elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=44d317ac data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/marketing/ target=_blank class=image-link aria-label=demo-marketing.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-marketing.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1951,7 +1680,7 @@ class=" elementor-element elementor-element-73b6fde7 e-con-full e-flex section-l
 class="elementor-element elementor-element-21fc93a3 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=21fc93a3 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/gym-and-fitness/ target=_blank class=image-link aria-label=demo-gym-and-fitness.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-gym-and-fitness.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1966,7 +1695,7 @@ class=" elementor-element elementor-element-33fc9a3 e-con-full e-flex section-li
 class="elementor-element elementor-element-47e11fdd elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=47e11fdd data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/design-agency/ target=_blank class=image-link aria-label=demo-design-agency.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-design-agency.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1981,7 +1710,7 @@ class=" elementor-element elementor-element-d72b068 e-con-full e-flex section-li
 class="elementor-element elementor-element-7fd62b0c elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=7fd62b0c data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/accounting/ target=_blank class=image-link aria-label=demo-accounting.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-accounting.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -1996,7 +1725,7 @@ class=" elementor-element elementor-element-5536ee24 e-con-full e-flex section-l
 class="elementor-element elementor-element-423aae7 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=423aae7 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/fashion-store/ target=_blank class=image-link aria-label=demo-fashion-store.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-fashion-store.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2011,7 +1740,7 @@ class=" elementor-element elementor-element-42f6cdb4 e-con-full e-flex section-l
 class="elementor-element elementor-element-658c93ce elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=658c93ce data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/interactive-portfolio/ target=_blank class=image-link aria-label=demo-interactive-portfolio.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-interactive-portfolio.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2026,7 +1755,7 @@ class=" elementor-element elementor-element-6ae7fec6 e-con-full e-flex section-l
 class="elementor-element elementor-element-4548f77b elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=4548f77b data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/yoga-and-meditation/ target=_blank class=image-link aria-label=demo-yoga-and-meditation.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-yoga-and-meditation.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2041,7 +1770,7 @@ class=" elementor-element elementor-element-5bcade1a e-con-full e-flex section-l
 class="elementor-element elementor-element-5ce4b22b elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=5ce4b22b data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/travel-agency/ target=_blank class=image-link aria-label=demo-travel-agency.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-travel-agency.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2056,7 +1785,7 @@ class=" elementor-element elementor-element-5fbb46b0 e-con-full e-flex section-l
 class="elementor-element elementor-element-12edc774 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=12edc774 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/photography/ target=_blank class=image-link aria-label=demo-photography.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-photography.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2071,7 +1800,7 @@ class=" elementor-element elementor-element-5e525884 e-con-full e-flex section-l
 class="elementor-element elementor-element-71fdf35d elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=71fdf35d data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/ebook/ target=_blank class=image-link aria-label=demo-ebook.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-ebook.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2086,7 +1815,7 @@ class=" elementor-element elementor-element-757ea89b e-con-full e-flex section-l
 class="elementor-element elementor-element-6c648d1 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=6c648d1 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/conference/ target=_blank class=image-link aria-label=demo-conference.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-conference.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2101,7 +1830,7 @@ class=" elementor-element elementor-element-dbcf17b e-con-full e-flex section-li
 class="elementor-element elementor-element-376b21d1 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=376b21d1 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/freelancer/ target=_blank class=image-link aria-label=demo-freelancer.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-freelancer.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2116,7 +1845,7 @@ class=" elementor-element elementor-element-2a65e88f e-con-full e-flex section-l
 class="elementor-element elementor-element-2b8e940e elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=2b8e940e data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/lawyer/ target=_blank class=image-link aria-label=demo-lawyer.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-lawyer.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2131,7 +1860,7 @@ class=" elementor-element elementor-element-269cce1d e-con-full e-flex section-l
 class="elementor-element elementor-element-30b6eb49 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=30b6eb49 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/blogger/ target=_blank class=image-link aria-label=demo-blogger.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-blogger.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2146,7 +1875,7 @@ class=" elementor-element elementor-element-cbddda4 e-con-full e-flex section-li
 class="elementor-element elementor-element-2d3cf92d elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=2d3cf92d data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/business/ target=_blank class=image-link aria-label=demo-business.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-business.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2161,7 +1890,7 @@ class=" elementor-element elementor-element-3f02e419 e-con-full e-flex section-l
 class="elementor-element elementor-element-7bfd9036 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=7bfd9036 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/horizontal-portfolio/ target=_blank class=image-link aria-label=demo-horizontal-portfolio.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-horizontal-portfolio.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2176,7 +1905,7 @@ class=" elementor-element elementor-element-65a122f4 e-con-full e-flex section-l
 class="elementor-element elementor-element-3ffea794 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=3ffea794 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/finance/ target=_blank class=image-link aria-label=demo-finance.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-finance.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2191,7 +1920,7 @@ class=" elementor-element elementor-element-68bef638 e-con-full e-flex section-l
 class="elementor-element elementor-element-29ecf457 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=29ecf457 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/decor-store/ target=_blank class=image-link aria-label=demo-decor-store.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-decor-store.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2206,7 +1935,7 @@ class=" elementor-element elementor-element-145e8b3 e-con-full e-flex section-li
 class="elementor-element elementor-element-79d36430 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=79d36430 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/wedding-invitation/ target=_blank class=image-link aria-label=demo-wedding-invitation.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-wedding-invitation.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2221,7 +1950,7 @@ class=" elementor-element elementor-element-52b7cea1 e-con-full e-flex section-l
 class="elementor-element elementor-element-35a0daaa elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=35a0daaa data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/vertical-portfolio/ target=_blank class=image-link aria-label=demo-vertical-portfolio.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-vertical-portfolio.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2236,7 +1965,7 @@ class=" elementor-element elementor-element-4d6019e0 e-con-full e-flex section-l
 class="elementor-element elementor-element-7a1c83a5 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=7a1c83a5 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/pizza-parlor/ target=_blank class=image-link aria-label=demo-pizza-parlor.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-pizza-parlor.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2251,7 +1980,7 @@ class=" elementor-element elementor-element-23d6d96c e-con-full e-flex section-l
 class="elementor-element elementor-element-733890b8 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=733890b8 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/music/ target=_blank class=image-link aria-label=demo-music.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-music.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2266,7 +1995,7 @@ class=" elementor-element elementor-element-2f4340b8 e-con-full e-flex section-l
 class="elementor-element elementor-element-3965c1b5 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=3965c1b5 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/magazine/ target=_blank class=image-link aria-label=demo-magazine.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-magazine.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2281,7 +2010,7 @@ class=" elementor-element elementor-element-66597f78 e-con-full e-flex section-l
 class="elementor-element elementor-element-28e448a1 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=28e448a1 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/charity/ target=_blank class=image-link aria-label=demo-charity.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-charity.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2296,7 +2025,7 @@ class=" elementor-element elementor-element-66a9b4ca e-con-full e-flex section-l
 class="elementor-element elementor-element-188f433c elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=188f433c data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/hosting/ target=_blank class=image-link aria-label=demo-hosting.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-hosting.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2311,7 +2040,7 @@ class=" elementor-element elementor-element-1795f3f4 e-con-full e-flex section-l
 class="elementor-element elementor-element-71ace233 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=71ace233 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/jewellery-store/ target=_blank class=image-link aria-label=demo-lewellery.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-lewellery.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2326,7 +2055,7 @@ class=" elementor-element elementor-element-355bb77a e-con-full e-flex section-l
 class="elementor-element elementor-element-75d0023c elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=75d0023c data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/architecture/ target=_blank class=image-link aria-label=demo-architecture.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-architecture.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2341,7 +2070,7 @@ class=" elementor-element elementor-element-5c2495e9 e-con-full e-flex section-l
 class="elementor-element elementor-element-4fe256f elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=4fe256f data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/minimal-portfolio/ target=_blank class=image-link aria-label=demo-minimal-portfolio.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-minimal-portfolio.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2356,7 +2085,7 @@ class=" elementor-element elementor-element-6610407a e-con-full e-flex section-l
 class="elementor-element elementor-element-3a5dd65 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=3a5dd65 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/digital-agency/ target=_blank class=image-link aria-label=demo-digital-agency.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-digital-agency.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2371,7 +2100,7 @@ class=" elementor-element elementor-element-7e17a462 e-con-full e-flex section-l
 class="elementor-element elementor-element-1b84791f elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=1b84791f data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/consulting/ target=_blank class=image-link aria-label=demo-consulting.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-consulting.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2386,7 +2115,7 @@ class=" elementor-element elementor-element-2bb0c7b9 e-con-full e-flex section-l
 class="elementor-element elementor-element-6e6eee17 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=6e6eee17 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/application/ target=_blank class=image-link aria-label=demo-application.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-application.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2401,7 +2130,7 @@ class=" elementor-element elementor-element-65dc953 e-con-full e-flex section-li
 class="elementor-element elementor-element-61c3aa26 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=61c3aa26 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/real-estate/ target=_blank class=image-link aria-label=demo-real-estate.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-real-estate.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2416,7 +2145,7 @@ class=" elementor-element elementor-element-4a7c85b8 e-con-full e-flex section-l
 class="elementor-element elementor-element-f9e5be1 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=f9e5be1 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/seo-agency/ target=_blank class=image-link aria-label=demo-seo-agency.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-seo-agency.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2431,7 +2160,7 @@ class=" elementor-element elementor-element-f48d74f e-con-full e-flex section-li
 class="elementor-element elementor-element-37e7dbf elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=37e7dbf data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/green-energy/ target=_blank class=image-link aria-label=demo-green-energy-1.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-green-energy-1.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2446,7 +2175,7 @@ class=" elementor-element elementor-element-47f6e65 e-con-full e-flex section-li
 class="elementor-element elementor-element-7431083 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=7431083 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/logistics/ target=_blank class=image-link aria-label=demo-logistics.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-logistics.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2461,7 +2190,7 @@ class=" elementor-element elementor-element-957900e e-con-full e-flex section-li
 class="elementor-element elementor-element-b62ccef elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=b62ccef data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/cryptocurrency/ target=_blank class=image-link aria-label=demo-cryptocurrency.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-cryptocurrency.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2476,7 +2205,7 @@ class=" elementor-element elementor-element-19ed574 e-con-full e-flex section-li
 class="elementor-element elementor-element-ef86d1c elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=ef86d1c data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/elder-care/ target=_blank class=image-link aria-label=demo-elder-care.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-elder-care.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2491,7 +2220,7 @@ class=" elementor-element elementor-element-56fc9aa1 e-con-full e-flex section-l
 class="elementor-element elementor-element-43cd7952 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=43cd7952 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/spa-salon/ target=_blank class=image-link aria-label=demo-spa-salon.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-spa-salon.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2506,7 +2235,7 @@ class=" elementor-element elementor-element-575585b7 e-con-full e-flex section-l
 class="elementor-element elementor-element-2715ddac elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=2715ddac data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/barber/ target=_blank class=image-link aria-label=demo-barber.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-barber.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2521,7 +2250,7 @@ class=" elementor-element elementor-element-32f504a8 e-con-full e-flex section-l
 class="elementor-element elementor-element-617ff742 elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=617ff742 data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/web-agency/ target=_blank class=image-link aria-label=demo-web-agency.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-web-agency.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2536,7 +2265,7 @@ class=" elementor-element elementor-element-674cf0d e-con-full e-flex section-li
 class="elementor-element elementor-element-770ccdba elementor-view-default elementor-widget elementor-widget-crafto-fancy-text-box" data-id=770ccdba data-element_type=widget data-widget_type=crafto-fancy-text-box.default><div
 class=elementor-widget-container>
 <a
-href=https://crafto.themezaa.com/startup/ target=_blank class=image-link aria-label=demo-startup.jpg><figure
+href=https://play.google.com/store/apps/details?id=co.white.iebqk target=_blank class=image-link aria-label=demo-startup.jpg><figure
 class="fancy-text-box-wrapper fancy-text-box-style-6"><div
 class=box-image>
 <img
@@ -2768,7 +2497,7 @@ rel=preload as=style onload="this.onload=null;this.rel='stylesheet'" id=crafto-c
 rel=stylesheet id=crafto-child-style-css href='https://crafto.themezaa.com/elearning/wp-content/themes/crafto-child/style.css?ver=6.8.3' media=all>
 </noscript><script src="https://crafto.themezaa.com/elearning/wp-content/themes/crafto/assets/js/imagesloaded.pkgd.min.js?ver=4.1.4" id=imagesloaded-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/themes/crafto/assets/js/isotope.pkgd.min.js?ver=3.0.6" id=isotope-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/themes/crafto/assets/js/bootstrap-dropdown.bundle.min.js?ver=5.3.7" id=bootstrap-dropdown-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/themes/crafto/assets/js/bootstrap-tooltips.bundle.min.js?ver=5.3.7" id=bootstrap-tooltips-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/themes/crafto/assets/js/jquery.magnific-popup.min.js?ver=1.2.0" id=magnific-popup-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/themes/crafto/assets/js/jquery.mCustomScrollbar.concat.min.js?ver=1.1.0" id=mCustomScrollbar-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/themes/crafto/assets/js/theme.js?ver=1.8" id=crafto-theme-js></script> <script id=crafto-main-js-extra>var CraftoMain = {"ajaxurl":"https:\/\/crafto.themezaa.com\/elearning\/wp-admin\/admin-ajax.php","site_id":"-28","disable_scripts":["justified-gallery","hover-animation","et-line","feather","fontawesome","iconsmind-line","iconsmind-solid","simple-line","themify","custom-parallax","fitvids","infinite-scroll","jquery-countdown","sticky-kit","parallax-liquid","google-map","image-compare-viewer","lottie","page-scroll","jquery-countdown","image-compare-viewer","lottie","page-scroll"],"iframe_enable":"1","maps_enable":"1","magnific_popup_video_disableOn":"0","craftoDelay":"1","craftoLoadStrategy":"delay","mobile_header_top_space":"1"};</script> <script src="https://crafto.themezaa.com/elearning/wp-content/themes/crafto/assets/js/main.js?ver=1.8" id=crafto-main-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/assets/js/vendors/particles.js?ver=2.0.0" id=particles-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/particle-effect.js?ver=1.8" id=crafto-particle-effect-widget-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.32.4" id=elementor-webpack-runtime-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.32.4" id=elementor-frontend-modules-js></script> <script src="https://crafto.themezaa.com/elearning/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id=jquery-ui-core-js></script> <script id=elementor-frontend-js-extra>var CraftoFrontend = {"ajaxurl":"https:\/\/crafto.themezaa.com\/elearning\/wp-admin\/admin-ajax.php","site_id":"-28","editor_entrance_disable":"0","editor_scrollable_disable":"0","mobile_animation_disable":"1","all_animations_disable":"0","postType":"page","magnific_popup_video_disableOn":"0","i18n":{"likeText":"Like","unlikeText":"Unlike","viewMore":"View All"}};</script> <script id=elementor-frontend-js-before>var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":576,"lg":992,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":575,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":767,"default_value":880,"direction":"max","is_enabled":true},"tablet":{"label":"Tablet Portrait","value":991,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1199,"default_value":1200,"direction":"max","is_enabled":true},"laptop":{"label":"Laptop","value":1399,"default_value":1366,"direction":"max","is_enabled":true},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":true},"version":"3.32.4","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"container":true,"nested-elements":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true,"import-export-customization":true},"urls":{"assets":"https:\/\/crafto.themezaa.com\/elearning\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/crafto.themezaa.com\/elearning\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/crafto.themezaa.com\/elearning\/wp-content\/uploads\/sites\/28"},"nonces":{"floatingButtonsClickTracking":"af40b17ab3"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_mobile":575,"viewport_mobile_extra":767,"viewport_tablet":991,"viewport_tablet_extra":1199,"viewport_laptop":1399,"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":5,"title":"eLearning","excerpt":"","featuredImage":false}};</script> <script src="https://crafto.themezaa.com/elearning/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.32.4" id=elementor-frontend-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/assets/js/vendors/anime.min.js?ver=3.2.2" id=anime-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/assets/js/vendors/animation.js?ver=1.8" id=animation-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/assets/js/vendors/atropos.js?ver=1.8" id=atropos-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/tilt-box.js?ver=1.8" id=crafto-tilt-box-widget-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/image.js?ver=1.8" id=crafto-image-widget-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/assets/js/vendors/jquery.appear.js?ver=0.6.2" id=appear-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/assets/js/vendors/splitting.js?ver=1.8" id=splitting-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/assets/js/vendors/fancy-text-effect.js?ver=1.8" id=crafto-fancy-text-effect-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/heading.js?ver=1.8" id=crafto-heading-widget-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/video-button.js?ver=1.8" id=crafto-video-button-widget-js></script> <script src="https://crafto.themezaa.com/elearning/wp-includes/js/underscore.min.js?ver=1.13.7" id=underscore-js></script> <script id=wp-util-js-extra>var _wpUtilSettings = {"ajax":{"url":"\/elearning\/wp-admin\/admin-ajax.php"}};</script> <script src="https://crafto.themezaa.com/elearning/wp-includes/js/wp-util.min.js?ver=6.8.3" id=wp-util-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/counter.js?ver=1.8" id=crafto-counter-widget-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/accordion.js?ver=1.8" id=crafto-accordion-widget-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/assets/js/vendors/swiper-bundle.min.js?ver=11.2.6" id=swiper-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/marquee-slider.js?ver=1.8" id=crafto-marquee-slider-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/testimonial-carousel.js?ver=1.8" id=crafto-testimonial-carousel-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/lightbox-gallery.js?ver=1.8" id=crafto-lightbox-gallery-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/blog-list.js?ver=1.8" id=crafto-blog-list-widget-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/primary-menu.js?ver=1.8" id=crafto-mega-menu-widget-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/text-editor.js?ver=1.8" id=crafto-text-editor-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/simple-menu.js?ver=1.8" id=crafto-simple-menu-widget-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/newsletter.js?ver=1.8" id=crafto-newsletter-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/widgets/assets/js/fancy-text-box.js?ver=1.8" id=crafto-fancy-text-box-widget-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/themes/crafto/assets/js/theme-back-to-top.js?ver=1.8" id=crafto-theme-back-to-top-js></script> <script id=crafto-magic-cursor-js-extra>var craftoMagicCursor = {"enableImage":"1","magicCursorImage":"https:\/\/crafto.themezaa.com\/elearning\/wp-content\/uploads\/sites\/28\/2025\/06\/group-arrow.svg","cursorStyle":"cursor-icon"};</script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/assets/js/vendors/magic-cursor.js?ver=1.8" id=crafto-magic-cursor-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/assets/js/vendors/skrollr.js?ver=0.6.30" id=skrollr-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/assets/js/vendors/floating-animation.js?ver=1.8" id=floating-animation-js></script> <script src="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/assets/js/frontend.js?ver=1.8" id=crafto-addons-frontend-script-js></script> <script delay="https://crafto.themezaa.com/elearning/wp-content/plugins/crafto-addons/includes/assets/js/frontend-lite.js?ver=1.8" id=crafto-addons-frontend-lite-js></script> 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" id="whatsapp-btn" style="position:fixed;bottom:30px;right:30px;z-index:9999;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(37,211,102,0.4);transition:transform 0.3s ease,box-shadow 0.3s ease;cursor:pointer;text-decoration:none;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.6)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 15px rgba(37,211,102,0.4)'">
+<a href="https://wa.me/918484813498" target="_blank" rel="noopener noreferrer" id="whatsapp-btn" style="position:fixed;bottom:30px;right:30px;z-index:9999;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(37,211,102,0.4);transition:transform 0.3s ease,box-shadow 0.3s ease;cursor:pointer;text-decoration:none;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.6)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 15px rgba(37,211,102,0.4)'">
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 <style>
@@ -2779,4 +2508,46 @@ rel=stylesheet id=crafto-child-style-css href='https://crafto.themezaa.com/elear
 }
 #whatsapp-btn { animation: whatsapp-pulse 2s infinite; }
 </style>
+
+<div id="ph-overlay"></div>
+<script>
+(function(){
+  // ── Logo fix ─────────────────────────────────────────────────────────────
+  function fixLogos() {
+    var logoHTML = '<span style="font-family:Space Grotesk,sans-serif;font-weight:800;font-size:1.5rem;color:#fff;letter-spacing:-0.5px;">Purple<span style="color:#D5D52B;">Hat</span></span>';
+    document.querySelectorAll('.navbar-brand').forEach(function(b){ b.innerHTML = logoHTML; });
+    document.querySelectorAll('a.image-link img').forEach(function(img){
+      if(img.src && img.src.indexOf('logo') !== -1){
+        var wrap = img.closest('a.image-link');
+        if(wrap){ wrap.innerHTML = logoHTML; }
+      }
+    });
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', fixLogos); }
+  else { fixLogos(); }
+
+  // ── Page fade-in ─────────────────────────────────────────────────────────
+  var ov = document.getElementById('ph-overlay');
+  if(ov){
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        ov.style.opacity = '0';
+        ov.style.pointerEvents = 'none';
+      });
+    });
+  }
+
+  // ── Page-out on internal link click ──────────────────────────────────────
+  document.addEventListener('click', function(e){
+    var link = e.target.closest('a[href]');
+    if(!link) return;
+    var href = link.getAttribute('href');
+    if(!href || href.charAt(0)==='#' || href.startsWith('http') || href.startsWith('tel:') || href.startsWith('mailto:') || href.startsWith('javascript') || link.getAttribute('target')==='_blank') return;
+    e.preventDefault();
+    var ov2 = document.getElementById('ph-overlay');
+    if(ov2){ ov2.style.transition='opacity .3s ease'; ov2.style.opacity='1'; ov2.style.pointerEvents='all'; }
+    setTimeout(function(){ window.location.href = href; }, 320);
+  });
+})();
+</script>
 </body></html>

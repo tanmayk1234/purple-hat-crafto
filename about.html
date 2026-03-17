@@ -1,376 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Purple Hat Institute</title>
-    <meta name="description" content="We configure engineering simple for last-minute learners. Meet our expert faculty and see our success story since 2014.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@600;700&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    
-    <!-- (Include the same inline styles for header/marquee/footer from index.html here or extract to style.css) -->
-    <style>
-        .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: all var(--transition-normal); background: transparent; padding: var(--space-3) 0; }
-        .site-header.is-sticky { background: var(--color-secondary); box-shadow: var(--shadow-sm); padding: var(--space-2) 0; }
-        .site-header .nav-link { color: var(--color-dark); font-weight: 500; margin: 0 var(--space-2); }
-        .site-header.is-sticky .nav-link { color: var(--color-dark); }
-        .page-title-section { padding: 180px 0 100px; background: linear-gradient(135deg, var(--color-light-alt) 0%, var(--color-light) 100%); text-align: center; }
-        
-        .achievement-timeline { position: relative; border-left: 3px solid var(--color-primary); padding-left: var(--space-4); margin-left: var(--space-2); }
-        .timeline-item { position: relative; margin-bottom: var(--space-5); }
-        .timeline-item::before { content: ''; position: absolute; left: calc(-var(--space-4) - 10px); top: 5px; width: 18px; height: 18px; border-radius: 50%; background: var(--color-primary); border: 4px solid var(--color-secondary); box-shadow: 0 0 0 4px rgba(153,0,204,0.2); }
-        
-        /* Copied Marquee */
-        .marquee-section { background-color: var(--color-primary); color: white; padding: var(--space-2) 0; overflow: hidden; display: flex; white-space: nowrap; }
-        .marquee-content { display: inline-block; animation: scroll-x 20s linear infinite; padding-right: 50px; font-family: var(--font-heading); font-size: 1.25rem; }
-        .marquee-text { margin: 0 30px; }
-        
-        .cta-banner-bottom { background: linear-gradient(135deg, #9900CC 0%, #7B00A3 100%); color: white; padding: var(--space-8) 0; }
-        
-        .site-footer { background-color: var(--color-dark-muted); color: rgba(255,255,255,0.7); padding: var(--space-10) 0 var(--space-4); }
-        .site-footer h5 { color: white; margin-bottom: var(--space-4); }
-        .site-footer a { color: rgba(255,255,255,0.7); display: block; margin-bottom: var(--space-2); }
-        .site-footer a:hover { color: var(--color-primary); }
-        .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; margin-right: 10px; }
-        .footer-social a:hover { background: var(--color-primary); color: white; }
-    </style>
-<style>.theme-demos,.theme-demos *{display:none !important;visibility:hidden !important;width:0 !important;height:0 !important;overflow:hidden !important;}</style></head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Purple Hat Institute</title>
+<meta name="description" content="Learn about Purple Hat Institute – Engineering झाली सोपी. Expert faculty, 50K+ students, proven results since 2014.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+  :root {
+    --primary: #D5D52B;
+    --dark: #313E3B;
+    --dark-muted: #232323;
+    --muted: #828C8A;
+    --light-bg: #ecf1f1;
+    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Space Grotesk', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); color: var(--dark); background: #fff; overflow-x: hidden; }
+  h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
+
+  /* ── HEADER ─────────────────────────────── */
+  .site-header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: var(--dark); padding: 16px 0;
+    transition: padding .3s, box-shadow .3s;
+  }
+  .site-header.scrolled { padding: 10px 0; box-shadow: 0 4px 20px rgba(0,0,0,.25); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; }
+  .logo-text {
+    font-family: var(--font-heading); font-weight: 800; font-size: 1.4rem;
+    color: #fff; text-decoration: none; letter-spacing: -0.5px;
+  }
+  .logo-text span { color: var(--primary); }
+  .nav-links { display: flex; list-style: none; gap: 32px; }
+  .nav-links a {
+    font-family: var(--font-body); font-weight: 500; font-size: .9rem;
+    color: rgba(255,255,255,.75); text-decoration: none; position: relative;
+    transition: color .25s;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+    background: var(--primary); transition: width .25s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: #fff; }
+  .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+  .header-phone {
+    background: var(--primary); color: var(--dark); font-weight: 700; font-size: .85rem;
+    padding: 9px 20px; border-radius: 50px; text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .header-phone:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(213,213,43,.35); color: var(--dark); }
+  .hamburger { background: none; border: none; color: #fff; font-size: 1.4rem; cursor: pointer; display: none; }
+
+  /* ── HERO BANNER ─────────────────────────── */
+  .hero-banner {
+    position: relative; min-height: 420px;
+    background: linear-gradient(135deg, #1a2320 0%, #2d3a37 40%, #313E3B 100%);
+    display: flex; align-items: center; overflow: hidden; padding-top: 80px;
+  }
+  .hero-banner::before {
+    content: ''; position: absolute; inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><circle cx="600" cy="100" r="300" fill="%23D5D52B" opacity=".04"/><circle cx="100" cy="350" r="200" fill="%23D5D52B" opacity=".03"/></svg>') no-repeat center/cover;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .hero-breadcrumb { font-size: .85rem; color: rgba(255,255,255,.5); margin-bottom: 16px; }
+  .hero-breadcrumb a { color: var(--primary); text-decoration: none; }
+  .hero-title {
+    font-family: var(--font-heading); font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 20px;
+  }
+  .hero-title .accent { color: var(--primary); }
+  .hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,.65); max-width: 540px; line-height: 1.7; }
+  .hero-image-col { position: relative; display: flex; justify-content: center; align-items: flex-end; }
+  .hero-img {
+    width: 340px; max-width: 100%;
+    border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+    object-fit: cover; object-position: top center;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,.4));
+    animation: heroFloat 4s ease-in-out infinite;
+  }
+  @keyframes heroFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  /* ── STATS BAR ───────────────────────────── */
+  .stats-bar { background: var(--primary); padding: 28px 0; }
+  .stat-item { text-align: center; }
+  .stat-number {
+    font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800;
+    color: var(--dark); line-height: 1;
+  }
+  .stat-label { font-size: .82rem; font-weight: 600; color: var(--dark); opacity: .7; text-transform: uppercase; letter-spacing: .5px; margin-top: 4px; }
+  .stat-divider { width: 1px; background: rgba(49,62,59,.2); align-self: stretch; }
+
+  /* ── SECTION COMMON ──────────────────────── */
+  .section { padding: 90px 0; }
+  .section-sm { padding: 60px 0; }
+  .badge-tag {
+    display: inline-block; font-size: .78rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--dark); background: var(--primary);
+    padding: 5px 14px; border-radius: 50px; margin-bottom: 18px;
+  }
+  .section-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; line-height: 1.2; color: var(--dark); }
+  .section-sub { font-size: 1rem; color: var(--muted); line-height: 1.8; margin-top: 14px; }
+
+  /* ── FEATURE BOXES ───────────────────────── */
+  .feature-box {
+    border: 1px solid #e8eceb; border-radius: 16px; padding: 36px 28px;
+    height: 100%; transition: all .35s; position: relative; overflow: hidden; background: #fff;
+  }
+  .feature-box::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: var(--primary); transform: scaleX(0); transition: transform .35s;
+  }
+  .feature-box:hover { box-shadow: 0 20px 50px rgba(49,62,59,.1); transform: translateY(-6px); border-color: transparent; }
+  .feature-box:hover::before { transform: scaleX(1); }
+  .feature-icon {
+    width: 60px; height: 60px; border-radius: 14px;
+    background: rgba(213,213,43,.12); display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; color: var(--dark); margin-bottom: 20px;
+  }
+  .feature-num { font-size: 2.4rem; font-weight: 800; color: var(--primary); font-family: var(--font-heading); line-height: 1; margin: 16px 0 8px; }
+  .feature-title { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+  .feature-desc { font-size: .88rem; color: var(--muted); line-height: 1.7; }
+  .feature-link {
+    display: inline-flex; align-items: center; gap: 6px; font-size: .8rem;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+    color: var(--dark); text-decoration: none; margin-top: 18px;
+    transition: gap .2s, color .2s;
+  }
+  .feature-link:hover { gap: 10px; color: var(--primary); }
+
+  /* ── MARQUEE ─────────────────────────────── */
+  .marquee-wrap {
+    background: var(--dark); overflow: hidden; padding: 20px 0;
+    display: flex; white-space: nowrap;
+  }
+  .marquee-track {
+    display: inline-flex; animation: marquee 30s linear infinite; will-change: transform;
+  }
+  .marquee-track + .marquee-track { margin-left: 0; }
+  .marquee-item {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--font-heading); font-size: 1.05rem; font-weight: 600;
+    color: rgba(255,255,255,.6); padding: 0 40px; white-space: nowrap;
+  }
+  .marquee-item .dot { color: var(--primary); font-size: 1.3rem; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ── STORY / WHY SECTION ─────────────────── */
+  .bg-light-alt { background: var(--light-bg); }
+  .story-image-wrap {
+    position: relative; border-radius: 20px; overflow: hidden;
+    box-shadow: 0 30px 70px rgba(49,62,59,.15);
+  }
+  .story-image-wrap img { width: 100%; height: 500px; object-fit: cover; object-position: top center; display: block; }
+  .story-badge {
+    position: absolute; bottom: 30px; left: 30px;
+    background: var(--primary); border-radius: 14px; padding: 16px 22px;
+    display: flex; align-items: center; gap: 14px; max-width: 220px;
+  }
+  .story-badge-icon { font-size: 1.8rem; color: var(--dark); }
+  .story-badge-text { font-family: var(--font-heading); font-size: .85rem; font-weight: 700; color: var(--dark); }
+  .numbered-item { display: flex; gap: 22px; margin-bottom: 34px; }
+  .numbered-item:last-child { margin-bottom: 0; }
+  .num-label {
+    font-family: var(--font-heading); font-size: 2.4rem; font-weight: 800;
+    color: var(--primary); opacity: .35; line-height: 1; flex-shrink: 0; min-width: 52px;
+  }
+  .num-content h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+  .num-content p { font-size: .9rem; color: var(--muted); line-height: 1.7; margin: 0; }
+
+  /* ── ACCORDION / FAQ ─────────────────────── */
+  .faq-item {
+    background: #fff; border-radius: 14px; padding: 24px 28px;
+    margin-bottom: 14px; box-shadow: 0 4px 20px rgba(49,62,59,.06);
+    cursor: pointer; transition: box-shadow .25s;
+  }
+  .faq-item.open { box-shadow: 0 8px 30px rgba(49,62,59,.12); }
+  .faq-header { display: flex; align-items: flex-start; gap: 20px; }
+  .faq-num {
+    font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800;
+    color: var(--primary); opacity: .25; line-height: 1; flex-shrink: 0; min-width: 36px;
+  }
+  .faq-item.open .faq-num { opacity: 1; }
+  .faq-question { font-size: 1rem; font-weight: 700; color: var(--dark); flex: 1; padding-top: 4px; }
+  .faq-icon { color: var(--muted); transition: transform .25s; flex-shrink: 0; margin-top: 6px; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--dark); }
+  .faq-answer { font-size: .9rem; color: var(--muted); line-height: 1.8; margin-top: 14px; padding-left: 56px; display: none; }
+  .faq-item.open .faq-answer { display: block; }
+
+  /* ── COMPARISON SECTION ──────────────────── */
+  .comparison-wrap { background: var(--dark); border-radius: 24px; padding: 50px 40px; }
+  .comp-col { text-align: center; padding: 0 20px; }
+  .comp-icon { font-size: 2.2rem; margin-bottom: 16px; }
+  .comp-title { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+  .comp-desc { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.7; }
+  .comp-divider { width: 1px; background: rgba(255,255,255,.1); align-self: stretch; margin: 0 20px; }
+  .vs-badge {
+    width: 52px; height: 52px; border-radius: 50%; background: var(--primary);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-heading); font-weight: 800; font-size: .9rem;
+    color: var(--dark); flex-shrink: 0;
+  }
+
+  /* ── CTA BANNER ──────────────────────────── */
+  .cta-section {
+    background: linear-gradient(120deg, var(--dark) 0%, #1e2a27 100%);
+    padding: 80px 0; position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: ''; position: absolute; top: -100px; right: -100px;
+    width: 400px; height: 400px; border-radius: 50%;
+    background: var(--primary); opacity: .06;
+  }
+  .cta-title { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; color: #fff; margin-bottom: 12px; }
+  .cta-sub { color: rgba(255,255,255,.6); font-size: 1rem; margin-bottom: 32px; }
+  .btn-primary-custom {
+    background: var(--primary); color: var(--dark); font-weight: 700; font-size: .95rem;
+    padding: 14px 36px; border-radius: 50px; border: none; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn-primary-custom:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(213,213,43,.4); color: var(--dark); }
+  .btn-ghost {
+    background: transparent; color: #fff; font-weight: 600; font-size: .95rem;
+    padding: 14px 36px; border-radius: 50px; border: 2px solid rgba(255,255,255,.25);
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: all .2s;
+  }
+  .btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
+
+  /* ── FOOTER ──────────────────────────────── */
+  .site-footer { background: var(--dark-muted); color: rgba(255,255,255,.65); padding: 70px 0 0; }
+  .footer-logo-text { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: #fff; }
+  .footer-logo-text span { color: var(--primary); }
+  .footer-desc { font-size: .9rem; line-height: 1.8; margin: 16px 0 24px; }
+  .social-links { display: flex; gap: 10px; }
+  .social-link {
+    width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.08);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.65); font-size: .9rem; text-decoration: none;
+    transition: background .2s, color .2s;
+  }
+  .social-link:hover { background: var(--primary); color: var(--dark); }
+  .footer-heading { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #fff; margin-bottom: 20px; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 10px; }
+  .footer-links a { color: rgba(255,255,255,.55); font-size: .88rem; text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: var(--primary); }
+  .app-btn {
+    display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.12); border-radius: 10px;
+    padding: 10px 16px; text-decoration: none; margin-bottom: 10px;
+    transition: background .2s, border-color .2s;
+  }
+  .app-btn:hover { background: rgba(213,213,43,.12); border-color: var(--primary); }
+  .app-btn i { font-size: 1.6rem; color: #fff; }
+  .app-btn-label { font-size: .7rem; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .5px; }
+  .app-btn-store { font-size: .9rem; font-weight: 700; color: #fff; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 22px 0; margin-top: 50px; }
+  .footer-bottom-text { font-size: .82rem; color: rgba(255,255,255,.35); }
+
+  /* ── WHATSAPP ─────────────────────────────── */
+  .whatsapp-btn {
+    position: fixed; bottom: 30px; right: 30px; z-index: 9999;
+    width: 60px; height: 60px; background: #25D366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 15px rgba(37,211,102,.4); text-decoration: none;
+    animation: wpulse 2s infinite; transition: transform .3s;
+  }
+  .whatsapp-btn:hover { transform: scale(1.12); }
+  @keyframes wpulse {
+    0%,100% { box-shadow: 0 4px 15px rgba(37,211,102,.4); }
+    50% { box-shadow: 0 4px 30px rgba(37,211,102,.7); }
+  }
+
+  /* ── MOBILE MENU ─────────────────────────── */
+  .mobile-menu {
+    display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 280px;
+    background: var(--dark); z-index: 2000; padding: 30px 24px;
+    transform: translateX(100%); transition: transform .35s;
+    box-shadow: -10px 0 40px rgba(0,0,0,.3);
+  }
+  .mobile-menu.open { transform: translateX(0); }
+  .mobile-overlay {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 1999;
+  }
+  .mobile-overlay.open { display: block; }
+  .mobile-menu-links { list-style: none; margin-top: 40px; }
+  .mobile-menu-links li { border-bottom: 1px solid rgba(255,255,255,.08); }
+  .mobile-menu-links a {
+    display: block; padding: 16px 0; font-size: 1rem; font-weight: 600;
+    color: rgba(255,255,255,.8); text-decoration: none;
+  }
+  .mobile-menu-links a:hover, .mobile-menu-links a.active { color: var(--primary); }
+  .mobile-close { background: none; border: none; color: rgba(255,255,255,.6); font-size: 1.4rem; cursor: pointer; float: right; }
+
+  /* ── RESPONSIVE ──────────────────────────── */
+  @media (max-width: 991px) {
+    .nav-links, .header-phone-wrap { display: none !important; }
+    .hamburger { display: block; }
+    .hero-image-col { display: none; }
+    .comp-divider { display: none; }
+    .comparison-wrap { padding: 36px 24px; }
+  }
+  @media (max-width: 767px) {
+    .section { padding: 60px 0; }
+    .story-badge { display: none; }
+  }
+
+  /* ── PAGE TRANSITION OVERLAY ─────────────── */
+  #ph-overlay {
+    position: fixed; inset: 0; background: var(--dark);
+    z-index: 999999; pointer-events: none;
+    opacity: 1; transition: opacity .4s ease;
+  }
+</style>
+</head>
 <body>
 
-    <!-- HEADER (Same as Home) -->
-    <header class="site-header">
-        <div class="container d-flex align-items-center justify-content-between">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/images/logo-black.png" alt="Purple Hat Institute" height="50">
-                </a>
-            </div>
-            
-            <nav class="d-none d-lg-block">
-                <ul class="d-flex list-unstyled m-0">
-                    <li><a href="index.html" class="nav-link hover-lift">Home</a></li>
-                    <li><a href="about.html" class="nav-link text-primary fw-bold">About</a></li>
-                    <li><a href="contact.html" class="nav-link hover-lift">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header-right d-none d-lg-flex align-items-center">
-                <a href="tel:8484813498" class="d-flex align-items-center gap-2 text-dark font-heading fw-bold">
-                    <i class="fa-solid fa-phone text-primary"></i> 8484813498
-                </a>
-            </div>
-
-            <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-                <i class="fa-solid fa-bars fs-3 text-dark"></i>
-            </button>
-        </div>
-    </header>
-
-    <!-- Mobile Menu Offcanvas -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title text-primary">Purple Hat</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="list-unstyled mb-4">
-                <li class="mb-3"><a href="index.html" class="text-dark fs-5">Home</a></li>
-                <li class="mb-3"><a href="about.html" class="text-dark fs-5 text-primary fw-bold">About</a></li>
-                <li class="mb-3"><a href="contact.html" class="text-dark fs-5">Contact</a></li>
-            </ul>
-            <a href="tel:8484813498" class="btn btn-primary w-100">
-                <i class="fa-solid fa-phone"></i> 8484813498
-            </a>
-        </div>
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo-text">Purple<span>Hat</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="header-phone-wrap">
+        <a href="tel:8484813498" class="header-phone"><i class="fa-solid fa-phone me-2"></i>8484813498</a>
+      </div>
+      <button class="hamburger" id="hamburgerBtn"><i class="fa-solid fa-bars"></i></button>
     </div>
+  </div>
+</header>
 
-    <main>
-        <!-- PAGE TITLE SECTION -->
-        <section class="page-title-section">
-            <div class="container" data-aos="fade-up">
-                <span class="d-block text-uppercase fw-bold text-primary mb-3 tracking-widest" style="letter-spacing: 2px; font-size: 14px;">We provide quality education.</span>
-                <h1 class="display-3 fw-bold mb-4">About Purple Hat</h1>
-                <div class="mx-auto" style="width: 60px; height: 4px; background-color: var(--color-primary); border-radius: 2px;"></div>
-            </div>
-        </section>
+<!-- Mobile Menu -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose"><i class="fa-solid fa-xmark"></i></button>
+  <div style="margin-top:10px;">
+    <span class="logo-text" style="font-size:1.2rem;">Purple<span>Hat</span></span>
+  </div>
+  <ul class="mobile-menu-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  <a href="tel:8484813498" class="btn-primary-custom mt-4 w-100 justify-content-center"><i class="fa-solid fa-phone"></i> 8484813498</a>
+</div>
 
-        <!-- ABOUT INTRO SECTION -->
-        <section class="section-padding bg-white">
-            <div class="container">
-                <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
-                    <div class="col-lg-8">
-                        <span class="badge-label">Know our story</span>
-                        <h2 class="display-5 fw-bold mb-4">We make engineering simple.</h2>
-                        <p class="fs-5 text-muted mb-0">Purple Hat Institute was founded with a simple idea: help engineering students who study at the last minute. We understand the pressure of exams, and we've built our courses to deliver maximum results in minimum time.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOUR FEATURE CARDS -->
-        <section class="pb-5 mb-5 bg-white">
-            <div class="container">
-                <div class="row g-4">
-                    <!-- Card 1 -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift text-center">
-                            <div class="bg-light-purple text-primary mx-auto rounded-circle d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px; font-size: 28px;">
-                                <i class="fa-solid fa-user-graduate"></i>
-                            </div>
-                            <h4 class="fw-bold">Expert Faculty</h4>
-                            <p class="text-muted small mb-4 flex-grow-1">Learn from Mangesh Sir with 10+ years of teaching engineering students.</p>
-                            <h3 class="text-primary mb-3">10+ Years</h3>
-                            <a href="#" class="link-animated small justify-content-center text-uppercase">Meet our team</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 2 -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift text-center">
-                            <div class="bg-light-purple text-primary mx-auto rounded-circle d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px; font-size: 28px;">
-                                <i class="fa-solid fa-thumbs-up"></i>
-                            </div>
-                            <h4 class="fw-bold">Student Satisfaction</h4>
-                            <p class="text-muted small mb-4 flex-grow-1">Our students consistently score first class and distinctions in university exams.</p>
-                            <h3 class="text-primary mb-3">95%</h3>
-                            <a href="#" class="link-animated small justify-content-center text-uppercase">Read testimonials</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 3 -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift text-center">
-                            <div class="bg-light-purple text-primary mx-auto rounded-circle d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px; font-size: 28px;">
-                                <i class="fa-solid fa-certificate"></i>
-                            </div>
-                            <h4 class="fw-bold">Quality Content</h4>
-                            <p class="text-muted small mb-4 flex-grow-1">Comprehensive courses covering all subjects for Degree and Diploma engineering.</p>
-                            <h3 class="text-primary mb-3">100+</h3>
-                            <a href="#" class="link-animated small justify-content-center text-uppercase">View courses</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift text-center">
-                            <div class="bg-light-purple text-primary mx-auto rounded-circle d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px; font-size: 28px;">
-                                <i class="fa-solid fa-mobile-screen-button"></i>
-                            </div>
-                            <h4 class="fw-bold">Learn Anywhere</h4>
-                            <p class="text-muted small mb-4 flex-grow-1">Download our app and study on the go. Available on Android and iOS.</p>
-                            <h3 class="text-primary mb-3">50K+</h3>
-                            <a href="#" class="link-animated small justify-content-center text-uppercase">Download app</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SCROLLING TEXT BANNER -->
-        <div class="marquee-section">
-            <div class="marquee-content d-flex">
-                <span class="marquee-text">• providing quality education</span>
-                <span class="marquee-text">• making engineering simple</span>
-                <span class="marquee-text">• trusted by toppers</span>
-                <span class="marquee-text">• learn in your language</span>
-                <span class="marquee-text">• providing quality education</span>
-                <span class="marquee-text">• making engineering simple</span>
-                <span class="marquee-text">• trusted by toppers</span>
-                <span class="marquee-text">• learn in your language</span>
-            </div>
-            <div class="marquee-content d-flex" aria-hidden="true">
-                <span class="marquee-text">• providing quality education</span>
-                <span class="marquee-text">• making engineering simple</span>
-                <span class="marquee-text">• trusted by toppers</span>
-                <span class="marquee-text">• learn in your language</span>
-                <span class="marquee-text">• providing quality education</span>
-                <span class="marquee-text">• making engineering simple</span>
-                <span class="marquee-text">• trusted by toppers</span>
-                <span class="marquee-text">• learn in your language</span>
-            </div>
+<!-- HERO BANNER -->
+<section class="hero-banner">
+  <div class="container">
+    <div class="row align-items-end">
+      <div class="col-lg-6 col-md-8 pb-lg-5" style="padding-top:60px; padding-bottom:60px;">
+        <div class="hero-content" data-anim="fade-up">
+          <div class="hero-breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; About Us</div>
+          <h1 class="hero-title">We Make<br><span class="accent">Engineering</span><br>Simple.</h1>
+          <p class="hero-subtitle">Purple Hat Institute has been helping engineering students crack exams with confidence since 2014. Expert faculty, proven results, and learning in your language.</p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="contact.html" class="btn-primary-custom"><i class="fa-solid fa-graduation-cap"></i> Enroll Now</a>
+            <a href="tel:8484813498" class="btn-ghost"><i class="fa-solid fa-phone"></i> Call Us</a>
+          </div>
         </div>
+      </div>
+      <div class="col-lg-6 hero-image-col">
+        <img src="hero-banner.png" alt="Mangesh Sir – Purple Hat Institute" class="hero-img">
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- WHY CHOOSE US SECTION (Teaching that makes you productive) -->
-        <section class="section-padding bg-light-gray">
-            <div class="container">
-                <div class="row align-items-center flex-row-reverse">
-                    <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-left">
-                        <div class="img-zoom-container rounded-4 shadow-lg overflow-hidden" style="height: 500px; background: #ddd; display: flex; align-items: center; justify-content: center;">
-                            <p class="text-muted"><i class="fa-solid fa-chalkboard-user fs-1 d-block mb-3 text-center"></i> [Mangesh Sir Teaching Image]</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
-                        <span class="badge-label">Why students trust us</span>
-                        <h2 class="display-6 fw-bold mb-5">Teaching that makes you productive.</h2>
-                        
-                        <div class="d-flex mb-4">
-                            <h3 class="text-primary opacity-50 me-4">01</h3>
-                            <div>
-                                <h4>Learn from experienced educators</h4>
-                                <p>Our faculty has helped thousands of engineering students pass their exams with flying colors.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-4">
-                            <h3 class="text-primary opacity-50 me-4">02</h3>
-                            <div>
-                                <h4>Flexible learning on your schedule</h4>
-                                <p>Study whenever you want. Our app lets you learn at your own pace, anywhere.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-0">
-                            <h3 class="text-primary opacity-50 me-4">03</h3>
-                            <div>
-                                <h4>Affordable and accessible</h4>
-                                <p>Pay only for subjects you need. Quality education shouldn't break the bank.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="row justify-content-center text-center g-0">
+      <div class="col-6 col-md-3 stat-item py-2">
+        <div class="stat-number">50K+</div>
+        <div class="stat-label">Students Enrolled</div>
+      </div>
+      <div class="d-none d-md-block col-md-auto stat-divider"></div>
+      <div class="col-6 col-md-3 stat-item py-2">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Years Teaching</div>
+      </div>
+      <div class="d-none d-md-block col-md-auto stat-divider"></div>
+      <div class="col-6 col-md-3 stat-item py-2">
+        <div class="stat-number">95%</div>
+        <div class="stat-label">Pass Rate</div>
+      </div>
+      <div class="d-none d-md-block col-md-auto stat-divider"></div>
+      <div class="col-6 col-md-3 stat-item py-2">
+        <div class="stat-number">4.8★</div>
+        <div class="stat-label">App Rating</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <!-- ACHIEVEMENTS TIMELINE SECTION -->
-        <section class="section-padding bg-white">
-            <div class="container text-center mb-5" data-aos="fade-up">
-                <span class="badge-label mx-auto">Our journey</span>
-                <h2 class="display-5 fw-bold mb-3">Great achievements</h2>
-            </div>
-            
-            <div class="container max-w-md mx-auto" style="max-width: 800px;">
-                <div class="achievement-timeline">
-                    <!-- Timeline Item -->
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="0">
-                        <span class="d-block text-primary fw-bold fs-4 mb-2">2014</span>
-                        <h4 class="fw-bold">Purple Hat Institute founded in Nashik</h4>
-                        <p class="text-muted">Started with a mission to simplify engineering education for local students.</p>
-                    </div>
-                    <!-- Timeline Item -->
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                        <span class="d-block text-primary fw-bold fs-4 mb-2">2018</span>
-                        <h4 class="fw-bold">Launched mobile app on Play Store</h4>
-                        <p class="text-muted">Digital transition to reach students beyond our physical classrooms.</p>
-                    </div>
-                    <!-- Timeline Item -->
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                        <span class="d-block text-primary fw-bold fs-4 mb-2">2020</span>
-                        <h4 class="fw-bold">Reached 25,000+ students milestone</h4>
-                        <p class="text-muted">Became a trusted name among students looking for effective last-minute prep.</p>
-                    </div>
-                    <!-- Timeline Item -->
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                        <span class="d-block text-primary fw-bold fs-4 mb-2">2024</span>
-                        <h4 class="fw-bold">50,000+ app downloads achieved</h4>
-                        <p class="text-muted">Continuing to expand our subject library across multiple engineering branches.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PRE-FOOTER CTA BANNER -->
-        <section class="cta-banner-bottom text-center px-3" data-aos="fade-up">
-            <h2 class="display-6 fw-bold mb-4">Admissions open for all engineering branches</h2>
-            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
-                <a href="contact.html" class="btn-white btn-lg fw-bold">Enroll Now</a>
-                <a href="tel:8484813498" class="text-white fs-4 fw-bold text-decoration-none hover-lift d-inline-block"><i class="fa-solid fa-phone me-2"></i> 8484813498</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER (Same as Home) -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row g-5 mb-5 pb-5 border-bottom border-secondary border-opacity-25">
-                <!-- Col 1 -->
-                <div class="col-lg-4 pe-lg-5">
-                    <img src="assets/images/logo-white.png" alt="Purple Hat Institute" height="50" class="mb-4">
-                    <p class="mb-4 text-opacity-75">We provide quality engineering education in Marathi and English. Making engineering simple since 2014.</p>
-                    <div class="footer-social">
-                        <a href="https://www.youtube.com/@PURPLEHAT" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.instagram.com/purplehatinstitute/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/purple-hat-institute-891418359/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Col 2 -->
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="fw-bold fs-6 text-uppercase tracking-wide">Quick Links</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="#">Our Courses</a></li>
-                        <li><a href="#">Degree Engineering</a></li>
-                        <li><a href="#">Diploma Engineering</a></li>
-                        <li><a href="#">Subject-wise Courses</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Col 3 -->
-                <div class="col-lg-3 col-md-4">
-                    <h5 class="fw-bold fs-6 text-uppercase tracking-wide">Need Help?</h5>
-                    <p class="mb-1">Call us directly</p>
-                    <a href="tel:8484813498" class="text-white fs-5 fw-bold mb-3 d-block">8484813498</a>
-                    
-                    <p class="mb-2 text-white">Visit our centers:</p>
-                    <a href="#" class="small mb-1"><i class="fa-solid fa-location-dot me-2 text-primary"></i>KBT Circle, Nashik</a>
-                    <a href="#" class="small"><i class="fa-solid fa-location-dot me-2 text-primary"></i>Indira Nagar, Nashik</a>
-                </div>
-                
-                <!-- Col 4 -->
-                <div class="col-lg-3 col-md-4">
-                    <h5 class="fw-bold fs-6 text-uppercase tracking-wide">Download App</h5>
-                    <div class="d-flex flex-column gap-3">
-                        <a href="https://play.google.com/store/apps/details?id=co.white.iebqk" target="_blank" class="bg-dark border border-secondary border-opacity-25 rounded px-3 py-2 d-flex align-items-center gap-3 w-100 text-decoration-none">
-                            <i class="fa-brands fa-google-play fs-3 text-white"></i>
-                            <div>
-                                <span class="d-block text-uppercase lh-1" style="font-size: 9px;">Get it on</span>
-                                <span class="d-block text-white fw-bold lh-1">Google Play</span>
-                            </div>
-                        </a>
-                        <a href="https://apps.apple.com/pt/app/purple-hat/id6670333636" target="_blank" class="bg-dark border border-secondary border-opacity-25 rounded px-3 py-2 d-flex align-items-center gap-3 w-100 text-decoration-none">
-                            <i class="fa-brands fa-apple fs-3 text-white"></i>
-                            <div>
-                                <span class="d-block text-uppercase lh-1" style="font-size: 9px;">Download on the</span>
-                                <span class="d-block text-white fw-bold lh-1">App Store</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="mb-0 small">&copy; 2025 Purple Hat Institute. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="small d-inline-block me-3">Privacy Policy</a>
-                    <a href="#" class="small d-inline-block">Terms of Service</a>
-                </div>
-            </div>
+<!-- FEATURE BOXES -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-7">
+        <span class="badge-tag">What we offer</span>
+        <h2 class="section-title">Everything you need to succeed in engineering exams.</h2>
+        <p class="section-sub">From concept clarity to exam strategy — we cover it all for Degree and Diploma engineering students.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <div class="feature-title">Expert Faculty</div>
+          <div class="feature-desc">Learn directly from Mangesh Sir — 10+ years of experience turning struggling students into toppers.</div>
+          <div class="feature-num">10+</div>
+          <div class="feature-desc">Years of experience</div>
+          <a href="contact.html" class="feature-link">Enroll now <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-    </footer>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <div class="feature-title">Learn Anywhere</div>
+          <div class="feature-desc">Our app lets you study on the go — video lectures, notes and practice Q&A all in one place.</div>
+          <div class="feature-num">50K+</div>
+          <div class="feature-desc">App downloads</div>
+          <a href="https://play.google.com/store/apps/details?id=co.white.iebqk" class="feature-link" target="_blank">Download app <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="feature-title">Proven Results</div>
+          <div class="feature-desc">Students consistently score first class and distinctions in university exams after joining us.</div>
+          <div class="feature-num">95%</div>
+          <div class="feature-desc">Student pass rate</div>
+          <a href="contact.html" class="feature-link">Read reviews <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fa-solid fa-language"></i></div>
+          <div class="feature-title">Marathi & English</div>
+          <div class="feature-desc">Concepts explained in Marathi and English so every student truly understands, not just memorizes.</div>
+          <div class="feature-num">2</div>
+          <div class="feature-desc">Languages of instruction</div>
+          <a href="contact.html" class="feature-link">Get started <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/918484813498?text=Hi,%20I'm%20interested%20in%20Purple%20Hat%20courses." target="_blank" class="whatsapp-float">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+<!-- MARQUEE BANNER -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="dot">★</span> Engineering झाली सोपी</span>
+    <span class="marquee-item"><span class="dot">★</span> Expert Faculty</span>
+    <span class="marquee-item"><span class="dot">★</span> 50K+ Students</span>
+    <span class="marquee-item"><span class="dot">★</span> Learn in Marathi</span>
+    <span class="marquee-item"><span class="dot">★</span> Proven Results</span>
+    <span class="marquee-item"><span class="dot">★</span> Degree & Diploma</span>
+    <span class="marquee-item"><span class="dot">★</span> Engineering झाली सोपी</span>
+    <span class="marquee-item"><span class="dot">★</span> Expert Faculty</span>
+    <span class="marquee-item"><span class="dot">★</span> 50K+ Students</span>
+    <span class="marquee-item"><span class="dot">★</span> Learn in Marathi</span>
+    <span class="marquee-item"><span class="dot">★</span> Proven Results</span>
+    <span class="marquee-item"><span class="dot">★</span> Degree & Diploma</span>
+  </div>
+  <div class="marquee-track" aria-hidden="true">
+    <span class="marquee-item"><span class="dot">★</span> Engineering झाली सोपी</span>
+    <span class="marquee-item"><span class="dot">★</span> Expert Faculty</span>
+    <span class="marquee-item"><span class="dot">★</span> 50K+ Students</span>
+    <span class="marquee-item"><span class="dot">★</span> Learn in Marathi</span>
+    <span class="marquee-item"><span class="dot">★</span> Proven Results</span>
+    <span class="marquee-item"><span class="dot">★</span> Degree & Diploma</span>
+    <span class="marquee-item"><span class="dot">★</span> Engineering झाली सोपी</span>
+    <span class="marquee-item"><span class="dot">★</span> Expert Faculty</span>
+    <span class="marquee-item"><span class="dot">★</span> 50K+ Students</span>
+    <span class="marquee-item"><span class="dot">★</span> Learn in Marathi</span>
+    <span class="marquee-item"><span class="dot">★</span> Proven Results</span>
+    <span class="marquee-item"><span class="dot">★</span> Degree & Diploma</span>
+  </div>
+</div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.css"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
+<!-- STORY / WHY SECTION -->
+<section class="section bg-light-alt">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="story-image-wrap">
+          <img src="hero-banner.png" alt="Mangesh Sir teaching">
+          <div class="story-badge">
+            <div class="story-badge-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="story-badge-text">Trusted by 50K+ students since 2014</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 ps-lg-5">
+        <span class="badge-tag">Why students trust us</span>
+        <h2 class="section-title mb-4">Teaching that makes you productive.</h2>
+        <div class="numbered-item">
+          <div class="num-label">01</div>
+          <div class="num-content">
+            <h4>Learn from an experienced educator</h4>
+            <p>Mangesh Sir has personally helped thousands of engineering students pass their university exams with first class and distinction grades.</p>
+          </div>
+        </div>
+        <div class="numbered-item">
+          <div class="num-label">02</div>
+          <div class="num-content">
+            <h4>Flexible learning on your schedule</h4>
+            <p>Study whenever you want. Our app lets you access video lectures, notes and practice papers at your own pace — even the night before your exam.</p>
+          </div>
+        </div>
+        <div class="numbered-item">
+          <div class="num-label">03</div>
+          <div class="num-content">
+            <h4>Affordable and accessible</h4>
+            <p>Pay only for the subjects you need. Quality engineering education shouldn't cost a fortune — and at Purple Hat, it doesn't.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-primary-custom mt-2"><i class="fa-solid fa-graduation-cap"></i> Enroll Now</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" style="position:fixed;bottom:30px;right:30px;z-index:9999;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(37,211,102,0.4);animation:whatsapp-pulse 2s infinite;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><style>@keyframes whatsapp-pulse{0%{box-shadow:0 4px 15px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 25px rgba(37,211,102,0.7)}100%{box-shadow:0 4px 15px rgba(37,211,102,0.4)}}</style></body>
+<!-- FAQ / ACCORDION -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center">
+        <span class="badge-tag">Common questions</span>
+        <h2 class="section-title">Everything you want to know about Purple Hat.</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-item open" onclick="toggleFaq(this)">
+          <div class="faq-header">
+            <div class="faq-num">01</div>
+            <div class="faq-question">Who are the courses designed for?</div>
+            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">Our courses are designed for Degree and Diploma engineering students affiliated with universities in Maharashtra — especially students who need to cover their syllabus quickly before exams.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-header">
+            <div class="faq-num">02</div>
+            <div class="faq-question">In which language are the lectures taught?</div>
+            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">All our lectures are taught in Marathi and Hindi with English technical terms, making it very easy for Maharashtra-based students to understand complex engineering concepts.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-header">
+            <div class="faq-num">03</div>
+            <div class="faq-question">How do I access the course content?</div>
+            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">Download the Purple Hat app from Google Play or the Apple App Store. After enrolling, all course videos, notes, and question papers are available instantly on your phone.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-header">
+            <div class="faq-num">04</div>
+            <div class="faq-question">What subjects are available?</div>
+            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">We cover all major subjects across Degree Engineering (BE/B.Tech) and Diploma Engineering programs — including Mathematics, Physics, Chemistry, core branch subjects, and more.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-header">
+            <div class="faq-num">05</div>
+            <div class="faq-question">How is Purple Hat different from other coaching institutes?</div>
+            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">Unlike traditional institutes, we focus on exam-oriented, efficient learning. Our content is precise, our language is simple (Marathi/English), and you can study anytime on your phone — no need to attend fixed classes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON SECTION -->
+<section class="section-sm bg-white">
+  <div class="container">
+    <div class="comparison-wrap">
+      <div class="row align-items-center justify-content-center g-4">
+        <div class="col-md-5 comp-col">
+          <div class="comp-icon" style="color:rgba(255,255,255,.3);"><i class="fa-solid fa-school"></i></div>
+          <div class="comp-title">Traditional Coaching</div>
+          <div class="comp-desc">Fixed schedules, crowded classrooms, high fees, lectures in one language, difficult to revise content.</div>
+        </div>
+        <div class="col-md-auto d-flex flex-column align-items-center justify-content-center">
+          <div class="vs-badge">VS</div>
+        </div>
+        <div class="col-md-5 comp-col">
+          <div class="comp-icon" style="color:var(--primary);"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <div class="comp-title">Purple Hat Institute</div>
+          <div class="comp-desc">Learn at your pace on mobile, affordable subject-wise pricing, Marathi/English instruction, instant replay anytime.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-section text-center">
+  <div class="container" style="position:relative;z-index:1;">
+    <span class="badge-tag">Admissions Open</span>
+    <h2 class="cta-title">Start your engineering journey today.</h2>
+    <p class="cta-sub">Join 50,000+ students who trust Purple Hat Institute for exam success.</p>
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+      <a href="contact.html" class="btn-primary-custom"><i class="fa-solid fa-graduation-cap"></i> Enroll Now</a>
+      <a href="tel:8484813498" class="btn-ghost"><i class="fa-solid fa-phone"></i> 8484813498</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5 pb-5">
+      <div class="col-lg-4">
+        <div class="footer-logo-text">Purple<span>Hat</span></div>
+        <p class="footer-desc">We provide quality engineering education in Marathi and English. Making engineering simple since 2014.</p>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@PURPLEHAT" target="_blank" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.instagram.com/purplehatinstitute/" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/purple-hat-institute-891418359/" target="_blank" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=co.white.iebqk" target="_blank">Our App</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="footer-heading">Need Help?</div>
+        <p style="font-size:.88rem;margin-bottom:4px;">Call us directly</p>
+        <a href="tel:8484813498" style="color:#fff;font-size:1.1rem;font-weight:700;text-decoration:none;display:block;margin-bottom:16px;">8484813498</a>
+        <p style="font-size:.88rem;margin-bottom:8px;">Visit our centers:</p>
+        <p style="font-size:.85rem;margin-bottom:4px;"><i class="fa-solid fa-location-dot me-2" style="color:var(--primary);"></i>KBT Circle, Nashik</p>
+        <p style="font-size:.85rem;"><i class="fa-solid fa-location-dot me-2" style="color:var(--primary);"></i>Indira Nagar, Nashik</p>
+      </div>
+      <div class="col-lg-3">
+        <div class="footer-heading">Download App</div>
+        <a href="https://play.google.com/store/apps/details?id=co.white.iebqk&pcampaignid=web_share" target="_blank" class="app-btn">
+          <i class="fa-brands fa-google-play"></i>
+          <div><div class="app-btn-label">Get it on</div><div class="app-btn-store">Google Play</div></div>
+        </a>
+        <a href="https://apps.apple.com/pt/app/purple-hat/id6670333636?l=en-GB&platform=watch" target="_blank" class="app-btn">
+          <i class="fa-brands fa-apple"></i>
+          <div><div class="app-btn-label">Download on the</div><div class="app-btn-store">App Store</div></div>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="footer-bottom-text mb-0">© 2025 Purple Hat Institute. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="index.html" style="font-size:.82rem;color:rgba(255,255,255,.35);text-decoration:none;margin-right:16px;">Home</a>
+          <a href="about.html" style="font-size:.82rem;color:rgba(255,255,255,.35);text-decoration:none;margin-right:16px;">About Us</a>
+          <a href="contact.html" style="font-size:.82rem;color:rgba(255,255,255,.35);text-decoration:none;">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/918484813498?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Purple%20Hat%20courses." target="_blank" class="whatsapp-btn" rel="noopener noreferrer">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Sticky header
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('mobileClose');
+  function openMenu() { mobileMenu.classList.add('open'); overlay.classList.add('open'); mobileMenu.style.display='block'; overlay.style.display='block'; }
+  function closeMenu() { mobileMenu.classList.remove('open'); overlay.classList.remove('open'); setTimeout(()=>{ mobileMenu.style.display='none'; overlay.style.display='none'; }, 350); }
+  hamburger.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+
+  // FAQ toggle
+  function toggleFaq(el) {
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
+    if (!isOpen) el.classList.add('open');
+  }
+
+  // Animate on scroll (simple version)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.feature-box, .numbered-item, .faq-item, .stat-item').forEach(el => {
+    el.style.opacity = '0'; el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity .6s ease, transform .6s ease';
+    observer.observe(el);
+  });
+</script>
+
+<div id="ph-overlay"></div>
+<script>
+  (function(){
+    var ov = document.getElementById('ph-overlay');
+    if(ov){
+      requestAnimationFrame(function(){
+        requestAnimationFrame(function(){
+          ov.style.opacity = '0';
+          ov.style.pointerEvents = 'none';
+        });
+      });
+    }
+    document.addEventListener('click', function(e){
+      var link = e.target.closest('a[href]');
+      if(!link) return;
+      var href = link.getAttribute('href');
+      if(!href || href.charAt(0)==='#' || href.startsWith('http') || href.startsWith('tel:') || href.startsWith('mailto:') || href.startsWith('javascript') || link.getAttribute('target')==='_blank') return;
+      e.preventDefault();
+      var ov2 = document.getElementById('ph-overlay');
+      if(ov2){ ov2.style.transition='opacity .3s ease'; ov2.style.opacity='1'; ov2.style.pointerEvents='all'; }
+      setTimeout(function(){ window.location.href = href; }, 320);
+    });
+  })();
+</script>
+</body>
 </html>
