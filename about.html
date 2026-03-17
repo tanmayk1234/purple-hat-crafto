@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Purple Hat Institute</title>
+    <meta name="description" content="We configure engineering simple for last-minute learners. Meet our expert faculty and see our success story since 2014.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    
+    <!-- (Include the same inline styles for header/marquee/footer from index.html here or extract to style.css) -->
+    <style>
+        .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: all var(--transition-normal); background: transparent; padding: var(--space-3) 0; }
+        .site-header.is-sticky { background: var(--color-secondary); box-shadow: var(--shadow-sm); padding: var(--space-2) 0; }
+        .site-header .nav-link { color: var(--color-dark); font-weight: 500; margin: 0 var(--space-2); }
+        .site-header.is-sticky .nav-link { color: var(--color-dark); }
+        .page-title-section { padding: 180px 0 100px; background: linear-gradient(135deg, var(--color-light-alt) 0%, var(--color-light) 100%); text-align: center; }
+        
+        .achievement-timeline { position: relative; border-left: 3px solid var(--color-primary); padding-left: var(--space-4); margin-left: var(--space-2); }
+        .timeline-item { position: relative; margin-bottom: var(--space-5); }
+        .timeline-item::before { content: ''; position: absolute; left: calc(-var(--space-4) - 10px); top: 5px; width: 18px; height: 18px; border-radius: 50%; background: var(--color-primary); border: 4px solid var(--color-secondary); box-shadow: 0 0 0 4px rgba(153,0,204,0.2); }
+        
+        /* Copied Marquee */
+        .marquee-section { background-color: var(--color-primary); color: white; padding: var(--space-2) 0; overflow: hidden; display: flex; white-space: nowrap; }
+        .marquee-content { display: inline-block; animation: scroll-x 20s linear infinite; padding-right: 50px; font-family: var(--font-heading); font-size: 1.25rem; }
+        .marquee-text { margin: 0 30px; }
+        
+        .cta-banner-bottom { background: linear-gradient(135deg, #9900CC 0%, #7B00A3 100%); color: white; padding: var(--space-8) 0; }
+        
+        .site-footer { background-color: var(--color-dark-muted); color: rgba(255,255,255,0.7); padding: var(--space-10) 0 var(--space-4); }
+        .site-footer h5 { color: white; margin-bottom: var(--space-4); }
+        .site-footer a { color: rgba(255,255,255,0.7); display: block; margin-bottom: var(--space-2); }
+        .site-footer a:hover { color: var(--color-primary); }
+        .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; margin-right: 10px; }
+        .footer-social a:hover { background: var(--color-primary); color: white; }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER (Same as Home) -->
+    <header class="site-header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-black.png" alt="Purple Hat Institute" height="50">
+                </a>
+            </div>
+            
+            <nav class="d-none d-lg-block">
+                <ul class="d-flex list-unstyled m-0">
+                    <li><a href="index.html" class="nav-link hover-lift">Home</a></li>
+                    <li><a href="about.html" class="nav-link text-primary fw-bold">About</a></li>
+                    <li><a href="contact.html" class="nav-link hover-lift">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right d-none d-lg-flex align-items-center">
+                <a href="tel:8484813498" class="d-flex align-items-center gap-2 text-dark font-heading fw-bold">
+                    <i class="fa-solid fa-phone text-primary"></i> 8484813498
+                </a>
+            </div>
+
+            <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                <i class="fa-solid fa-bars fs-3 text-dark"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-primary">Purple Hat</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled mb-4">
+                <li class="mb-3"><a href="index.html" class="text-dark fs-5">Home</a></li>
+                <li class="mb-3"><a href="about.html" class="text-dark fs-5 text-primary fw-bold">About</a></li>
+                <li class="mb-3"><a href="contact.html" class="text-dark fs-5">Contact</a></li>
+            </ul>
+            <a href="tel:8484813498" class="btn btn-primary w-100">
+                <i class="fa-solid fa-phone"></i> 8484813498
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- PAGE TITLE SECTION -->
+        <section class="page-title-section">
+            <div class="container" data-aos="fade-up">
+                <span class="d-block text-uppercase fw-bold text-primary mb-3 tracking-widest" style="letter-spacing: 2px; font-size: 14px;">We provide quality education.</span>
+                <h1 class="display-3 fw-bold mb-4">About Purple Hat</h1>
+                <div class="mx-auto" style="width: 60px; height: 4px; background-color: var(--color-primary); border-radius: 2px;"></div>
+            </div>
+        </section>
+
+        <!-- ABOUT INTRO SECTION -->
+        <section class="section-padding bg-white">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <span class="badge-label">Know our story</span>
+                        <h2 class="display-5 fw-bold mb-4">We make engineering simple.</h2>
+                        <p class="fs-5 text-muted mb-0">Purple Hat Institute was founded with a simple idea: help engineering students who study at the last minute. We understand the pressure of exams, and we've built our courses to deliver maximum results in minimum time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOUR FEATURE CARDS -->
+        <section class="pb-5 mb-5 bg-white">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift text-center">
+                            <div class="bg-light-purple text-primary mx-auto rounded-circle d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px; font-size: 28px;">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+                            <h4 class="fw-bold">Expert Faculty</h4>
+                            <p class="text-muted small mb-4 flex-grow-1">Learn from Mangesh Sir with 10+ years of teaching engineering students.</p>
+                            <h3 class="text-primary mb-3">10+ Years</h3>
+                            <a href="#" class="link-animated small justify-content-center text-uppercase">Meet our team</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift text-center">
+                            <div class="bg-light-purple text-primary mx-auto rounded-circle d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px; font-size: 28px;">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                            </div>
+                            <h4 class="fw-bold">Student Satisfaction</h4>
+                            <p class="text-muted small mb-4 flex-grow-1">Our students consistently score first class and distinctions in university exams.</p>
+                            <h3 class="text-primary mb-3">95%</h3>
+                            <a href="#" class="link-animated small justify-content-center text-uppercase">Read testimonials</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift text-center">
+                            <div class="bg-light-purple text-primary mx-auto rounded-circle d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px; font-size: 28px;">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h4 class="fw-bold">Quality Content</h4>
+                            <p class="text-muted small mb-4 flex-grow-1">Comprehensive courses covering all subjects for Degree and Diploma engineering.</p>
+                            <h3 class="text-primary mb-3">100+</h3>
+                            <a href="#" class="link-animated small justify-content-center text-uppercase">View courses</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift text-center">
+                            <div class="bg-light-purple text-primary mx-auto rounded-circle d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px; font-size: 28px;">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <h4 class="fw-bold">Learn Anywhere</h4>
+                            <p class="text-muted small mb-4 flex-grow-1">Download our app and study on the go. Available on Android and iOS.</p>
+                            <h3 class="text-primary mb-3">50K+</h3>
+                            <a href="#" class="link-animated small justify-content-center text-uppercase">Download app</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCROLLING TEXT BANNER -->
+        <div class="marquee-section">
+            <div class="marquee-content d-flex">
+                <span class="marquee-text">• providing quality education</span>
+                <span class="marquee-text">• making engineering simple</span>
+                <span class="marquee-text">• trusted by toppers</span>
+                <span class="marquee-text">• learn in your language</span>
+                <span class="marquee-text">• providing quality education</span>
+                <span class="marquee-text">• making engineering simple</span>
+                <span class="marquee-text">• trusted by toppers</span>
+                <span class="marquee-text">• learn in your language</span>
+            </div>
+            <div class="marquee-content d-flex" aria-hidden="true">
+                <span class="marquee-text">• providing quality education</span>
+                <span class="marquee-text">• making engineering simple</span>
+                <span class="marquee-text">• trusted by toppers</span>
+                <span class="marquee-text">• learn in your language</span>
+                <span class="marquee-text">• providing quality education</span>
+                <span class="marquee-text">• making engineering simple</span>
+                <span class="marquee-text">• trusted by toppers</span>
+                <span class="marquee-text">• learn in your language</span>
+            </div>
+        </div>
+
+        <!-- WHY CHOOSE US SECTION (Teaching that makes you productive) -->
+        <section class="section-padding bg-light-gray">
+            <div class="container">
+                <div class="row align-items-center flex-row-reverse">
+                    <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-left">
+                        <div class="img-zoom-container rounded-4 shadow-lg overflow-hidden" style="height: 500px; background: #ddd; display: flex; align-items: center; justify-content: center;">
+                            <p class="text-muted"><i class="fa-solid fa-chalkboard-user fs-1 d-block mb-3 text-center"></i> [Mangesh Sir Teaching Image]</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
+                        <span class="badge-label">Why students trust us</span>
+                        <h2 class="display-6 fw-bold mb-5">Teaching that makes you productive.</h2>
+                        
+                        <div class="d-flex mb-4">
+                            <h3 class="text-primary opacity-50 me-4">01</h3>
+                            <div>
+                                <h4>Learn from experienced educators</h4>
+                                <p>Our faculty has helped thousands of engineering students pass their exams with flying colors.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <h3 class="text-primary opacity-50 me-4">02</h3>
+                            <div>
+                                <h4>Flexible learning on your schedule</h4>
+                                <p>Study whenever you want. Our app lets you learn at your own pace, anywhere.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-0">
+                            <h3 class="text-primary opacity-50 me-4">03</h3>
+                            <div>
+                                <h4>Affordable and accessible</h4>
+                                <p>Pay only for subjects you need. Quality education shouldn't break the bank.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS TIMELINE SECTION -->
+        <section class="section-padding bg-white">
+            <div class="container text-center mb-5" data-aos="fade-up">
+                <span class="badge-label mx-auto">Our journey</span>
+                <h2 class="display-5 fw-bold mb-3">Great achievements</h2>
+            </div>
+            
+            <div class="container max-w-md mx-auto" style="max-width: 800px;">
+                <div class="achievement-timeline">
+                    <!-- Timeline Item -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="0">
+                        <span class="d-block text-primary fw-bold fs-4 mb-2">2014</span>
+                        <h4 class="fw-bold">Purple Hat Institute founded in Nashik</h4>
+                        <p class="text-muted">Started with a mission to simplify engineering education for local students.</p>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <span class="d-block text-primary fw-bold fs-4 mb-2">2018</span>
+                        <h4 class="fw-bold">Launched mobile app on Play Store</h4>
+                        <p class="text-muted">Digital transition to reach students beyond our physical classrooms.</p>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <span class="d-block text-primary fw-bold fs-4 mb-2">2020</span>
+                        <h4 class="fw-bold">Reached 25,000+ students milestone</h4>
+                        <p class="text-muted">Became a trusted name among students looking for effective last-minute prep.</p>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <span class="d-block text-primary fw-bold fs-4 mb-2">2024</span>
+                        <h4 class="fw-bold">50,000+ app downloads achieved</h4>
+                        <p class="text-muted">Continuing to expand our subject library across multiple engineering branches.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRE-FOOTER CTA BANNER -->
+        <section class="cta-banner-bottom text-center px-3" data-aos="fade-up">
+            <h2 class="display-6 fw-bold mb-4">Admissions open for all engineering branches</h2>
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+                <a href="contact.html" class="btn-white btn-lg fw-bold">Enroll Now</a>
+                <a href="tel:8484813498" class="text-white fs-4 fw-bold text-decoration-none hover-lift d-inline-block"><i class="fa-solid fa-phone me-2"></i> 8484813498</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (Same as Home) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-5 mb-5 pb-5 border-bottom border-secondary border-opacity-25">
+                <!-- Col 1 -->
+                <div class="col-lg-4 pe-lg-5">
+                    <img src="assets/images/logo-white.png" alt="Purple Hat Institute" height="50" class="mb-4">
+                    <p class="mb-4 text-opacity-75">We provide quality engineering education in Marathi and English. Making engineering simple since 2014.</p>
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@PURPLEHAT" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/purplehatinstitute/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/purple-hat-institute-891418359/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Col 2 -->
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="fw-bold fs-6 text-uppercase tracking-wide">Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#">Our Courses</a></li>
+                        <li><a href="#">Degree Engineering</a></li>
+                        <li><a href="#">Diploma Engineering</a></li>
+                        <li><a href="#">Subject-wise Courses</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 3 -->
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fw-bold fs-6 text-uppercase tracking-wide">Need Help?</h5>
+                    <p class="mb-1">Call us directly</p>
+                    <a href="tel:8484813498" class="text-white fs-5 fw-bold mb-3 d-block">8484813498</a>
+                    
+                    <p class="mb-2 text-white">Visit our centers:</p>
+                    <a href="#" class="small mb-1"><i class="fa-solid fa-location-dot me-2 text-primary"></i>KBT Circle, Nashik</a>
+                    <a href="#" class="small"><i class="fa-solid fa-location-dot me-2 text-primary"></i>Indira Nagar, Nashik</a>
+                </div>
+                
+                <!-- Col 4 -->
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fw-bold fs-6 text-uppercase tracking-wide">Download App</h5>
+                    <div class="d-flex flex-column gap-3">
+                        <a href="https://play.google.com/store/apps/details?id=co.white.iebqk" target="_blank" class="bg-dark border border-secondary border-opacity-25 rounded px-3 py-2 d-flex align-items-center gap-3 w-100 text-decoration-none">
+                            <i class="fa-brands fa-google-play fs-3 text-white"></i>
+                            <div>
+                                <span class="d-block text-uppercase lh-1" style="font-size: 9px;">Get it on</span>
+                                <span class="d-block text-white fw-bold lh-1">Google Play</span>
+                            </div>
+                        </a>
+                        <a href="https://apps.apple.com/pt/app/purple-hat/id6670333636" target="_blank" class="bg-dark border border-secondary border-opacity-25 rounded px-3 py-2 d-flex align-items-center gap-3 w-100 text-decoration-none">
+                            <i class="fa-brands fa-apple fs-3 text-white"></i>
+                            <div>
+                                <span class="d-block text-uppercase lh-1" style="font-size: 9px;">Download on the</span>
+                                <span class="d-block text-white fw-bold lh-1">App Store</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 small">&copy; 2025 Purple Hat Institute. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="small d-inline-block me-3">Privacy Policy</a>
+                    <a href="#" class="small d-inline-block">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918484813498?text=Hi,%20I'm%20interested%20in%20Purple%20Hat%20courses." target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.css"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
